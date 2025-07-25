@@ -1,0 +1,694 @@
+
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+       }
+
+    body {
+      font-family: 'Nunito', sans-serif;
+      background-color: #fff;
+      color: #fff;
+    }
+
+    a {
+        font-weight: 600;
+        font-family: 'Nunito', sans-serif;
+        font-size: 16px;
+        line-height: 24px;
+        color: #fff;
+       }
+
+    
+
+
+        /* Top Bar */
+
+    .bg-bar{
+        background: #313338;
+        font-weight: 500;
+        color: #fff;
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .css-2usv4d {
+    width: 100%;
+    z-index: 20;
+    overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 3px 8px;
+    background: #1F1F1F;
+    padding: 16px;
+   }
+
+    .btn-text{
+        font-weight: 600;
+        color: #000;
+        font-size: 16px;
+        line-height: 19px;
+    }
+    .custom-login-btn{
+        padding: 8px 14px;
+    }
+    .btn-light{
+        background: #e2e8f0;
+    }
+    .btn-light:hover{
+        background: #000;
+        color: #fff;
+        border-color: #000;
+    }
+   
+
+   /* Custom Hamburger Button */
+        .hamburger-btn {
+        background: none;
+        border: none;
+        padding: 0.25rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 24px;
+        width: 30px;
+        cursor: pointer;
+        }
+
+        .hamburger-btn span {
+        display: block;
+        height: 3px;
+        width: 100%;
+        background-color: white;
+        border-radius: 2px;
+        }
+
+
+    .navbar-brand {
+      font-weight: 900;
+      font-size: 30px;
+      line-height: 30px;
+      color: #1abc9c;
+
+    }
+      .navbar-brand:hover {
+      font-weight: 900;
+      font-size: 30px;
+      line-height: 30px;
+      color: #1abc9c;
+
+    }
+
+
+
+
+    input::placeholder {
+      color: #ccc;
+    }
+
+    input:focus {
+      box-shadow: none !important;
+      border-color: #0d6efd !important;
+    }
+
+    .btn-light.text-success {
+      font-weight: 600;
+    }
+
+    .car-img {
+      max-height: 200px;
+    }
+
+    .offcanvas-dark {
+      background-color: #1c1c1c;
+      color: white;
+    }
+
+    .offcanvas-body a {
+      color: white;
+      text-decoration: none;
+      display: block;
+      padding: 0.5rem 0;
+    }
+
+    .offcanvas-body a:hover {
+      text-decoration: underline;
+    }
+
+    /* Responsive Design */
+@media (max-width: 991px) {
+  .navbar .container-fluid {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .navbar .d-flex.align-items-center {
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .hamburger-btn {
+    order: 2;
+    margin-left: auto;
+  }
+
+  .navbar-brand {
+    order: 1;
+    margin: 0;
+  }
+
+  .d-md-flex {
+    display: none !important;
+  }
+   .css-2usv4d {
+    border-bottom: 1px solid white !important;
+  }
+}
+
+    @media (max-width: 768px) {
+    .navbar .btn[data-bs-toggle="offcanvas"] {
+    margin-left: 532px;
+  }
+
+      .form-control.w-25 {
+        width: 100% !important;
+      }
+    }
+
+
+     @media (max-width: 768px) {
+    .navbar .btn[data-bs-toggle="offcanvas"] {
+    margin-left: 350px;
+  }
+    }
+
+     @media (max-width: 448px) {
+    .navbar .btn[data-bs-toggle="offcanvas"] {
+    margin-left: 250px;
+  }
+    }
+
+    @media (max-width: 375px) {
+    .navbar .btn[data-bs-toggle="offcanvas"] {
+    margin-left: 165px;
+  }
+    }
+
+    
+    /* hero section  */
+
+    .bg-hero{
+      background: #1C1C1C;
+    }
+
+    .fw-heading {
+      font-size: 50px;
+      line-height: 60px;
+    }
+
+    .fw-text {
+      font-weight: 600;
+      color: #fff;
+      font-size: 22px;
+      line-height: 33px;
+    }
+    
+    /* search bar */
+     .search-wrapper {
+      background-color: #ffffff;
+      border-radius: 999px;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      padding: 0;
+      border: 2px solid transparent;
+      transition: border 0.3s ease;
+      max-width: 400px;
+      width: 100%;
+      margin: 0 auto;
+      justify-content: space-between;
+      height: 65px;
+      margin-bottom: 6px;
+    }
+
+    .search-wrapper:focus-within:not(.error) {
+      border: 2px solid #00c19f;
+    }
+
+    .search-wrapper.error:not(:focus-within) {
+      border: 2px solid #ff4d4d;
+    }
+
+    .search-wrapper.error:focus-within {
+      border: 2px solid #ff4d4d;
+    }
+
+    .search-wrapper.error:hover {
+      border: 2px solid transparent;
+    }
+
+    .search-wrapper input {
+      border: none;
+      outline: none;
+      padding: 10px 0px 0px 16px;
+      font-size: 20px;
+      font-weight: 500;
+      color: #a0a4ab;
+      background: none;
+      width: 180px;
+    }
+
+    .search-wrapper button {
+      background-color: #1abc9c;
+      color: #fff;
+      border: none;
+      padding: 15px 18px;
+      font-size: 16px;
+      font-weight: 700;
+      border-radius: 999px;
+      margin-right: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      line-height: 19px;
+    }
+
+    .search-wrapper button:hover {
+      background-color: #1abc9c;
+    }
+
+    .search-wrapper input::placeholder {
+     color: #B8BFCA; 
+     opacity: 1; 
+     font-weight: 700;
+     font-size: 30px;
+     line-height: 45px;
+     }
+
+     .search-wrapper input {
+      font-size: 30px;       
+      font-weight: 700;      
+      color: #000;        
+      text-transform: uppercase; 
+      line-height: 45px;
+      }
+
+    .error-message,
+    .result-message {
+      color: #ff4d4d;
+      font-size: 14px;
+      margin-top: 10px;
+      display: none;
+    }
+
+    .error-message.active,
+    .result-message.active {
+      display: block;
+    }
+
+    .result-message.success {
+      color: #00c19f;
+    }
+
+    a.text-white.text-decoration-underline.small {
+      display: inline-block;
+    }
+
+    .car-img {
+    margin-bottom: 30px;
+    max-height: 180px;
+    height: auto;
+   }
+
+.custom-subsite{
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  color: #1abc9c;
+  background: #FFFFFF;
+}
+
+.custom-subsite:hover{
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  color: #1abc9c;
+  background: #FFFFFF;
+}
+.custom-small{
+  font-weight: 700;
+  color: #fff;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.custom-sidebar a{
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+  text-decoration: none!important;
+}
+
+.custom-offcanvas {
+  width: 320px!important; 
+}  
+
+@media (max-width: 1024px) {
+    .car-img{
+       margin-bottom: -5px!important;
+    }
+
+}
+
+@media (max-width: 991px) {
+    .car-img{
+      display: none;
+    }
+
+}
+
+@media (max-width: 576px) {
+  /* Your styles for extra small devices here */
+  .cart-img-bttom {
+    margin-bottom: -80px!important;
+  }
+}
+
+@media (max-width: 375px) {
+  .cart-img-bttom {
+    margin-bottom: -145px!important;
+  }
+ .search-wrapper {
+      max-width: 350px;
+    }
+
+}
+
+
+
+
+/* Car Check section */
+
+.feature-section {
+  background-color: #ECF0F1;
+}
+
+.feature-section h4 {
+  color: #1a202c;
+  font-size: 32px;
+  line-height: 38px;
+  font-weight: 600;
+}
+
+.feature-section p,
+.feature-section ul {
+  color: #1a202c;
+  font-size: 16px;
+  font-weight: 400;
+  line-height:24px;
+}
+.btn-textt{
+  background: #1abc9c;
+  border-color:#1abc9c; 
+  font-size: 16px;
+  color: #fff;
+  font-weight: 600;
+  line-height: 19px;
+  padding: 10px 10px;
+}
+
+.btn-textt:hover{
+  background: #1abc9c;
+  border-color:#1abc9c; 
+  font-size: 16px;
+  color: #fff;
+  font-weight: 600;
+  line-height: 19px;
+  padding: 10px 10px;
+}
+
+
+/* Free Car Check Section */
+
+.car-check-section {
+  background-color: #ECF0F1;
+}
+
+.car-check-section h2 {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 700;
+  font-size: 32px;
+  color: #1a202c;
+  line-height: 38px;
+}
+
+.car-check-list li {
+  margin-bottom: 10px;
+  line-height: 30px;
+  font-size: 14px;
+}
+
+.free-chek{
+  max-width: 400px;
+}
+ @media (max-width: 768px) {
+   .free-chek{
+  max-width: 200px;
+}
+ }
+/* History Report */
+.history-report{
+  background-color: #ECF0F1;
+}
+.main-section {
+      padding: 20px 0px;
+    }
+    .content-box {
+      background: #ffffff;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    }
+   
+   .content-box h1{
+    font-size: 32px;
+    font-weight: 700;
+    color: #1a202c;
+    line-height: 38px;
+   }
+
+   .content-box h2{
+    font-size: 22px;
+    font-weight: 700;
+    color: #1a202c;
+    line-height: 26px;
+   }
+
+    .content-box h3{
+    font-size: 20px;
+    font-weight: 700;
+    color: #1a202c;
+    line-height: 24px;
+   }
+
+    .content-box p{
+    font-size: 16px;
+    font-weight: 400;
+    color: #1a202c;
+    line-height: 24px;
+   }
+   
+    .content-box ul li{
+    font-size: 16px;
+    font-weight: 400;
+    color: #1a202c;
+    line-height: 24px;
+
+    }
+    .sidebar-h {
+      background: #ffffff;
+      padding: 25px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    }
+    .sidebar-h h3{
+      font-size: 22px;
+      line-height: 26px;
+      margin-bottom: 15px;
+      color: #1a202c;
+      line-height: 26px;
+      font-weight: 700;
+    }
+
+    .sidebar-h p{
+    font-size: 16px;
+    font-weight: 400;
+    color: #1a202c;
+    line-height: 24px;
+   }
+
+
+   .side-ay{
+    color: #1a202c;
+    font-weight: 400;
+   }
+
+    .sidebar-h ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    .sidebar-h ul li a {
+      color: #1a202c;
+      display: block;
+      padding: 5px 0;
+      font-weight: 400;
+    }
+    .sidebar-h ul li a:hover {
+      text-decoration: underline;
+    }
+
+
+ /* FAQ Section  */
+
+   .faq{
+      background-color: #ECF0F1;
+      padding: 5px;
+   }
+
+   .faq-container {
+      max-width: 800px;
+      margin: 50px auto;
+      padding: 30px;
+      background-color: #fff;
+      box-shadow: 0 0 25px rgba(0, 0, 0, 0.05);
+    }
+
+    .faq-title {
+      text-align: center;
+      font-weight: 700;
+      font-size: 30px;
+      margin-bottom: 30px;
+      color: #1a202c;
+      line-height: 36px;
+    }
+
+    .accordion-button {
+      font-weight: 700;
+      color: #1a202c;
+      box-shadow: none !important;
+      font-size: 18px;
+      line-height: 22px;
+    }
+
+    .accordion-button:not(.collapsed){
+      background: #fff;
+    }
+
+      .accordion-button:not(.collapsed):hover{
+      background: #fff;
+    }
+
+
+    .accordion-button:focus {
+      border-color: none;
+      box-shadow: none;
+    }
+
+    .accordion-button:not(.collapsed)::after {
+      transform: rotate(180deg);
+    }
+
+    .accordion-body {
+      color: #1a202c;
+    }
+
+    .accordion-item {
+      border-bottom: 1px solid #ddd;
+      border-radius: 0;
+      padding-bottom: 10px;
+      margin-bottom: 10px;
+    }
+
+
+ /* Footer CSS  */
+
+
+  .footer-custom {
+    font-size: 16px;
+    line-height: 24px;
+    min-height: 800px; 
+    
+  }
+
+  .footer-links li {
+    margin-bottom: 25px;
+  }
+
+  .footer-links a {
+    color: #fff;
+    text-decoration: none;
+  }
+
+  .footer-links a:hover,
+  .footer-bottom a:hover {
+    text-decoration: underline;
+  }
+
+  .footer-text {
+    font-size: 16px;
+    color: #fff;
+    font-weight: 400;
+    line-height: 24px;
+  }
+
+  .footer-tagline {
+    color: #ccc;
+    font-size: 14px;
+    margin-top: 10px;
+  }
+
+  .footer-bottom {
+    font-size: 13px;
+    color: #ccc;
+  }
+
+  .foot-con{
+   padding-top: 30px; 
+   padding-bottom: 30px; 
+  }
+
+    .social-footer {
+      background-color: #000;
+      color: #fff;
+      padding: 30px 20px;
+      text-align: center;
+    }
+    .social-footer h5 {
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+    
+    .social-icons a {
+      color: white;
+      font-size: 25px;
+      margin: 0 10px;
+      transition: all 0.3s ease;
+      display: inline-block;
+    }
+    
+    .facebook-icon {
+      background-color: #fff;
+      color: #000;
+      border-radius: 50%;
+      width: 28px;
+      height: 28px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      text-decoration: none;
+      transition: 0.3s ease;
+    }
+

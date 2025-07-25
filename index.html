@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>VehicleScore - Free Car Check</title>
+
+  <!-- Google Font: Nunito -->
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Font Awesome CDN -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+  <!-- Top Bar -->
+  <div class="bg-bar text-center py-1 small">
+    Over 50 Million Vehicle Scores Generated
+  </div>
+  <!-- Navbar -->
+  <nav class="navbar css-2usv4d">
+    <div class="container-fluid d-flex justify-content-between align-items-center">
+      <div class="d-flex align-items-center">
+         <!-- Hamburger Trigger -->
+            <button class="hamburger-btn me-3" data-bs-toggle="offcanvas" data-bs-target="#sidebarMenu">
+            <span></span>
+            <span></span>
+            <span></span>
+            </button>
+         <a class="navbar-brand d-flex align-items-center" href="#">
+        <img src="image/carvalueio1200.png" alt="Logo" style="height: 32px;" class="me-2">
+         carvalue.io
+      </a>
+      </div>
+      <div class="d-none d-md-flex gap-3 align-items-center">
+        <a href="#" class="text-white text-decoration-none">AI Mechanic</a>
+        <a href="#" class="text-white text-decoration-none">Sign up</a>
+        <button class="btn btn-light btn-text rounded-pill custom-login-btn">Login</button>
+      </div>
+    </div>
+  </nav>
+  <!-- Sidebar -->
+  <div class="offcanvas offcanvas-start offcanvas-dark custom-offcanvas" tabindex="-1" id="sidebarMenu">
+    <div class="offcanvas-header">
+      <button type="button" class="btn-close btn-close-white ms-auto" data-bs-dismiss="offcanvas"></button>
+    </div>
+    <div class="offcanvas-body custom-sidebar">
+      <a href="#">Free Car Check</a>
+      <a href="#">MOT Check</a>
+      <a href="#">TAX Check</a>
+      <a href="#">AI Mechanic</a>
+      <a href="#">Lifespan Estimates</a>
+      <a href="#">Blogs</a>
+      <a href="#">Login</a>
+      <a href="#">Register</a>
+      <hr class="border-white" />
+      <a href="#">Customer Service</a>
+      <a href="#">Feedback</a>
+    </div>
+  </div>
+<!-- hero section -->
+<div class="container-full bg-hero text-center position-relative d-flex flex-column justify-content-center" style="height: 70vh; overflow: hidden;">
+  <h1 class="fw-bold fw-heading">Free Car Check</h1>
+  <p class="fw-text">Enter your reg number for a Car Check</p>
+     <!-- search bar -->
+    <div class="search-wrapper" id="searchWrapper">
+    <input type="text" placeholder="ENTER REG" id="regInput" />
+    <button type="submit" id="checkBtn">Check Car</button>
+  </div>
+  <div class="error-message" id="errorMessage">Please enter a reg first</div>
+  <div class="result-message" id="resultMessage"></div>
+    
+ <div class="mt-2">
+  <button id="buyBtn" class="btn custom-subsite rounded-pill">
+    Buy Full History Car Check
+  </button>
+</div>
+
+
+  <div class="mt-3">
+    <a href="#" class=" text-decoration-underline custom-small">View Sample Full History Report</a>
+  </div>
+
+  <!-- Car Image -->
+      <div class="position-absolute bottom-0 end-0 me-5 mb-2  ">
+       <img src="image/rs-car.webp" alt="Car Image" class="img-fluid car-img" />
+      </div>
+
+             <!-- Car Image mobile -->
+        <div class="position-absolute bottom-5 end-0 me-0 mb-5 d-lg-none cart-img-bttom">
+        <img src="image/mobile-car.png" alt="Car Image" class="img-fluid cart-img" />
+       </div>
+
+</div>
+<!-- Car Check section -->
+<section class="py-5  text-center feature-section">
+  <div class="container">
+    <div class="row g-4">
+      
+      <!-- Box 1 -->
+      <div class="col-md-4">
+        <img src="image/car-with-checklist.webp" alt="Car Check Icon" class="img-fluid mb-3" style="max-height: 120px;">
+        <h4 class="fw-semibold">What’s Included in a Car Check?</h4>
+        <ul class="list-unstyled mt-3 small text-muted">
+          <li>Stolen check</li>
+          <li>Written off check</li>
+          <li>Salvage check</li>
+          <li>Outstanding finance check</li>
+          <li>VIN check</li>
+          <li><strong>85+ Checks in total</strong></li>
+        </ul>
+        <a href="#" class="btn btn-textt mt-2 px-4">View Sample</a>
+      </div>
+      
+      <!-- Box 2 -->
+      <div class="col-md-4">
+        <img src="image/car-checking.webp" alt="Guarantee Icon" class="img-fluid mb-3" style="max-height: 120px;">
+        <h4 class="fw-semibold">£10,000 Data Guarantee</h4>
+        <p class="small text-muted mt-3 px-2">
+          Our full car check comes with a £10,000 data guarantee.<br>
+          We work with our partners at Experian to be able to provide you with<br>
+          this data coverage, to enable you to have <strong>complete peace of mind</strong> when<br>
+          buying a vehicle.
+        </p>
+        <a href="#" class="btn btn-textt mt-2 px-4">View Example</a>
+      </div>
+      
+      <!-- Box 3 -->
+      <div class="col-md-4">
+        <img src="image/car-checks.webp" alt="Full History Check" class="img-fluid mb-3" style="max-height: 120px;">
+        <h4 class="fw-semibold">Full Car History Check</h4>
+        <p class="small text-muted mt-3 px-2">
+          Our <strong>car history check</strong> includes over 85 point data checks.<br>
+          Giving you the most comprehensive car check that money can buy.<br>
+          Our data partners at Experian are the leaders in data sourcing for UK vehicle data.
+        </p>
+        <a href="#" class="btn btn-textt mt-2 px-4">Get Started</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Free Car Check Section -->
+<section class="car-check-section">
+  <div class="container">
+    <div class="row bg-white p-4 rounded">
+      <!-- Text Content -->
+      <div class="col-md-7 text-black">
+        <h2 class="mb-3">What's included in our Free Car Check?</h2>
+        <p class="mb-4">Discover the wealth of insights provided by our comprehensive vehicle check, powered by DVLA data. Our free report delivers a detailed breakdown of crucial car information, including:</p>
+        <ul class="list-unstyled car-check-list">
+          <li>1.<strong>1. Vehicle Specs</strong> – Brand, model, body style, and year of registration verification.</li>
+          <li>2.<strong>2. Ownership History</strong> – Number of previous owners, including the current keeper.</li>
+          <li>3.<strong>3. ULEZ Compliance</strong> – Check if your vehicle meets ULEZ standards.</li>
+          <li>4.<strong>4. Road Tax Information</strong> – CO2 emissions, tax costs/rates, and expiry details.</li>
+          <li>5.<strong>5. MOT History</strong> – Advisory notes, failure reasons, and expiry date.</li>
+          <li>6.<strong>6. Mileage Verification</strong> – Discrepancies, total miles, and yearly patterns using our Mileage Check.</li>
+          <li>7.<strong>7. Import Details</strong> – Verify import status using our Import Check.</li>
+          <li>8.<strong>8. Engine and Performance</strong> – Engine capacity (CC), horsepower (BHP), top speed, and acceleration.</li>
+          <li>9.<strong>9. Fuel Efficiency</strong> – MPG for urban, extra urban, and combined conditions.</li>
+          <li>10.<strong>10. Transmission and Fuel Type</strong> – Manual/automatic; petrol, diesel, electric, or hybrid.</li>
+          <li>11.<strong>11. Approval and Weight</strong> – Vehicle type approval and weight specs.</li>
+          <li>12.<strong>12. Manufacturing Year</strong> – Excluding imported motorcycles, vans, and cars.</li>
+          <li>13.<strong>13. V5C Details</strong> – Latest issue date for the vehicle registration certificate.</li>
+          <li>14.<strong>14. Environmental Impact</strong> – CO2 emissions per European standards.</li>
+          <li>15.<strong>15. Stolen Status</strong> – Check for theft reports with our Stolen Vehicle Check.</li>
+          <li>16.<strong>16. Salvage Sightings</strong> – Detect salvage yard appearances.</li>
+          <li>17.<strong>17. Valuations</strong> – Includes an 8-point valuation system for accurate car pricing.</li>
+          <li>18.<strong>18. VehicleScore</strong> – Our patented scoring system (0-999).</li>
+          <li>19.<strong>19. Life Span Estimates</strong> – Accurate stats based on make, model, and year.</li>
+        </ul>
+      </div>
+
+      <!-- Image -->
+      <div class="col-md-5 px-5">
+        <img src="image/checklist.webp" alt="Checklist Illustration" class="img-fluid free-chek">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- History Report -->
+<section class="history-report">
+ <div class="container main-section">
+    <div class="row">
+      <div class="col-lg-8 mb-4 text-black">
+        <div class="content-box">
+          <h1>Instant UK Vehicle History Report</h1>
+          <p>Checking a car can feel overwhelming, especially with countless websites offering similar services. VehicleScore makes this process simple, even for those with limited car knowledge. Our innovative car check service gathers all the available data and presents it as a straightforward, easy-to-understand score—just like a credit score.</p>
+
+          <h2>Compare Your Car with Ease</h2>
+          <p>One major benefit of our scoring system is that it provides averages for each car’s make, model, year, and fuel type. This allows you to <strong>compare cars accurately,</strong> ensuring you're looking at comparable options.</p>
+          <p>Buying a used car can be a daunting task. Especially when you're not sure what to look for.</p>
+          <p>That's where a car check comes in. It's a comprehensive evaluation of a vehicle's history and condition.</p>
+          <p>But there's more to it. A vehiclescore is also crucial. It's a rating that assesses the overall quality and reliability of a car.</p>
+          <p>Both these tools provide valuable insights into a car's worth. They can uncover hidden problems and predict future repairs.</p>
+          <p>This guide will help you understand why getting a car check and a vehiclescore is important when buying a used car. It will provide practical advice on how to evaluate a used car's condition and worth.</p>
+          <p>So, let's dive in and make your car buying journey a little less intimidating.</p>
+           <h2>Understanding Car Checks and Vehiclescores</h2>
+           <p>A car check involves digging into a vehicle's past. It uncovers details about previous accidents, repairs, and ownership. This evaluation helps reveal the true story behind a used car.</p>
+           <p>In contrast, a vehiclescore is a summary rating. It considers various factors like age, mileage, and maintenance records. This score indicates the overall reliability and potential longevity of a car.</p>
+
+          <h3>Here’s how they differ:</h3>
+          <ul class="list-unstyled">
+            <li><strong>Car Checks</strong> focus on the vehicle’s detailed history.</li>
+            <li><strong>Vehiclescore</strong> provides an overview of the car’s expected performance and reliability.</li>
+          </ul>
+             <p>While both are essential, each serves a unique purpose. A car check gives insight into potential hidden issues and the car's legal status. Meanwhile, a vehiclescore simplifies this information, allowing you to quickly grasp the car’s reliability.</p>
+             <p>Together, these tools empower you with critical information. They help ensure you are making an informed decision. This combination reduces the risk of unforeseen problems after purchase, providing you peace of mind in your car buying journey.</p>
+
+          <h2>The Value of a Comprehensive Car History Check</h2>
+          <p>A comprehensive car history check is your detective tool. It delves deep into the past of a used vehicle. This process helps uncover hidden issues that may not be noticeable at first glance.</p>
+          <p>Knowing a car's service history is crucial. It shows if the vehicle has been well-maintained over the years. Regular maintenance often indicates that the previous owner took good care of the car.</p>
+          <p>Past ownership records are equally important. They can reveal how many hands the car has passed through. Multiple owners in a short span could be a red flag, indicating potential issues or dissatisfaction.</p>
+          <p>Additionally, identifying past accidents is vital. Even minor collisions can impact a car's performance or safety. Discovering these issues allows you to assess whether the car is worth pursuing or if you should walk away. This evaluation aids in making a confident and informed decision when buying a used car.</p>
+
+          <h2>The Significance of a Vehiclescore in Car Buying</h2>
+          <p>A vehiclescore serves as a numerical rating that summarizes a car's overall quality. It assesses key factors like age, mileage, and maintenance history. This score gives you a snapshot of the car's reliability, helping you compare different vehicles with ease.</p>
+          <p>By analyzing a vehiclescore, you can predict potential future repairs. It reflects the likelihood of mechanical issues based on the car's track record. This insight can save you from unexpected costs down the road, making sure that you're prepared for any future expenses.</p>
+          <p>Moreover, the vehiclescore hints at the car's longevity. A high score often means the car is in good condition, promising a long lifespan. This assurance can boost your confidence in your purchase decision, ensuring the vehicle meets your long-term needs without constant repair concerns.</p>
+
+          <h2>Pre-Purchase Inspection: Your Physical Car Check Before Buying</h2>
+          <p>A pre-purchase inspection is a detailed physical examination of the vehicle conducted by a professional mechanic. This check involves looking under the hood, inspecting the brakes, tires, and testing the car's electronics. It's a crucial step that complements the information from a car check and vehiclescore by revealing issues that data might miss.</p>
+          <p>Having a mechanic thoroughly inspect the car helps ensure your safety on the road. It identifies potential mechanical failures that could compromise safety or lead to costly repairs. By confirming the vehicle's true condition, a pre-purchase inspection offers peace of mind and a solid foundation for your buying decision.</p>
+
+          <h2>How a Car Check Can Empower Your Negotiation</h2>
+          <p>A car check provides essential leverage when negotiating with sellers. By highlighting any issues discovered during the check, buyers can ask for necessary repairs or adjustments in price. Sellers are more likely to agree when presented with documented proof of the car's problems.</p>
+          <p>Understanding a car's actual condition through a check ensures you pay a fair price. It prevents overpaying for a vehicle with hidden flaws. A well-informed buyer can confidently discuss value, leading to a fair deal based on the vehicle's true state.</p>
+
+          <h2>Free Car Check vs. Paid Services: What You Need to Know</h2>
+          <p>A free car check is a good starting point for any buyer. It usually provides basic information like history alerts or accident records. However, it may not cover every detail needed for a comprehensive evaluation.</p>
+          <p>Paid services, on the other hand, offer in-depth analyses. They provide detailed history, uncover hidden issues, and assess mechanical aspects. Consider opting for a paid service when buying a car with a complex history or higher value. This ensures you receive all the critical information necessary for a sound buying decision.</p>
+
+          <h2>Interpreting Car Check Results and Vehiclescores</h2>
+          <p>Once you receive the car check report, take time to review the details thoroughly. Look for any red flags such as accidents, consistent mechanical issues, or multiple past owners. These could indicate potential problems down the road.</p>
+          <p>A vehiclescore adds another layer of insight into the car's overall reliability and longevity. Use the score as a guideline to determine if the vehicle meets your standards. If the results reveal concerns, consider discussing them with the seller for clarification or price adjustments. This approach ensures your decision aligns with your priorities for reliability and peace of mind.</p>
+
+          <h2>Finalizing Your Purchase: A Car Buying Checklist</h2>
+           <p>Before sealing the deal, verify all essential documents. This includes the vehicle title, registration, and any warranty details. Consistent maintenance records further affirm the car's reliability.</p>
+              <h3>Essential steps to consider:</h3>
+          <ul>
+            <li>1. Verify the vehicle's title and history.</li>
+            <li>2. Confirm registration is current and correct.</li>
+            <li>3. Review any warranty information and conditions.</li>
+            <li>4. Double-check the car's condition aligns with the report.</li>
+          </ul>
+             <p>Take your time with these final steps. Thorough review ensures your purchase is informed and secure, providing confidence and peace of mind on the road ahead.</p>
+          <h2>Conclusion: The Importance of Due Diligence in Used Car Buying</h2>
+          <p>Performing due diligence is crucial in purchasing a used car. By conducting comprehensive checks and obtaining a vehiclescore, you guard against hidden issues and ensure a fair deal. Take the time to review all elements carefully, empowering you to make a confident and well-informed decision.</p>
+        </div>
+      </div>
+
+      <div class="col-lg-4 text-black">
+        <div class="sidebar-h">
+          <h3>What Makes Our Car Checker the Best</h3>
+           <h3>The Score</h3>
+           <p>Our unique score took over three years to develop and launch. It is an algorithm created by a team of vehicle experts who understand what makes a car reliable, safe, and worthy of purchase. This score is at the heart of our vehicle check service, helping you make informed decisions.</p>
+            <h3>Expected Lifespan</h3>
+           <p>With over 40 million vehicles in our database provided by the DVLA, we have the data to accurately estimate the expected lifespan for specific makes and models. Our car mileage check empowers you with insights about a vehicle’s potential longevity.</p>
+            <h3>AI Mechanic</h3>
+            <p>Our AI Mechanic is one of a kind. Not only do we provide a complete DVLA vehicle check, but we also include an <strong>AI-powered mechanic</strong>  that can instantly answer any questions about your report or the vehicle itself.</p>
+             <h3>MOT History Details</h3>
+             <p>MOT history can be overwhelming to analyze. <a class="side-ay" href="">Our MOT history check</a>  simplifies this by breaking down MOT data into easy-to-understand insights, ensuring you have a clear picture of the vehicle’s history.</p>
+             <h3>35+ Extra Data Fields</h3>
+             <p>In addition to the features above, <a href="side-ay">our MOT and Tax check</a> provides access to over 35 extra data fields—10 more than any other car check website—giving you the most comprehensive report available. What more could you want from a free vehicle check?</p>
+
+         
+          <p class="fw-semibold">Other useful links</p>
+          <ul>
+            <li><a href="#">VehicleScore Check</a></li>
+            <li><a href="#">Car MOT History Check</a></li>
+            <li><a href="#">MOT & Tax Check</a></li>
+            <li><a href="#">DVLA Vehicle Check</a></li>
+            <li><a href="#">ULEZ Compliance Check</a></li>
+            <li><a href="#">Car Write-Off Check</a></li>
+            <li><a href="#">Car Mileage Check</a></li>
+            <li><a href="#">Check if your car is insured with askMID</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ Section Start -->
+ <section class="faq">
+<div class="faq-container">
+  <h2 class="faq-title">Frequently Asked Questions</h2>
+  <div class="accordion" id="faqAccordion">
+
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="faq1">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1">
+          How can I check a car history for free?
+        </button>
+      </h2>
+      <div id="collapse1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+        <div class="accordion-body">
+          To check a car's history for free, you can use VehicleScore's car history check tool. Simply enter the vehicle registration number, and our system will provide essential details, such as tax and MOT status, SORN status, and basic vehicle information.
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="faq2">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2">
+          Why is a car history check so important?
+        </button>
+      </h2>
+      <div id="collapse2" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+        <div class="accordion-body">
+         <p>A car history check is crucial for ensuring the vehicle you're buying has no hidden issues.</p>
+         <p>It can reveal critical information like outstanding finance, previous write-offs, theft records, and more. This knowledge helps you make informed purchasing decisions and avoid costly mistakes.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="faq3">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3">
+          How can I perform a DVLA car check?
+        </button>
+      </h2>
+      <div id="collapse3" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+        <div class="accordion-body">
+          Performing a DVLA car check is straightforward with VehicleScore's tool. Enter the registration number to access official DVLA data, including tax status, MOT history, and SORN details.
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="faq4">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4">
+          Is VehicleScore’s car check available for free?
+        </button>
+      </h2>
+      <div id="collapse4" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+        <div class="accordion-body">
+          Yes, VehicleScore offers a free car check service. This includes details like tax and MOT status, basic vehicle information, and more, all sourced directly from official records.
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="faq5">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5">
+          Can I still buy a vehicle without an HPI check?
+        </button>
+      </h2>
+      <div id="collapse5" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+        <div class="accordion-body">
+          While it is possible to buy a car without an HPI check, doing so can be risky.
+
+An HPI check uncovers important details like outstanding finance or write-off records that could affect your ownership. A VehicleScore history report can help you make safer decisions.
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="faq6">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse6">
+          What happens if no information is available for the vehicle?
+        </button>
+      </h2>
+      <div id="collapse6" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+        <div class="accordion-body">
+         <p>If no information is available for a vehicle, it could be due to incorrect registration details or the vehicle being too old for certain records.</p>
+         <p>In such cases, double-check the registration number or consider professional advice to explore alternative ways of verifying its history.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="faq7">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse7">
+          Can you provide a Vehicle Score based on the car’s history?
+        </button>
+      </h2>
+      <div id="collapse7" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+        <div class="accordion-body">
+          <p>Yes, VehicleScore generates a unique score based on a vehicle's history, ranging from 0 to 999.</p>
+          <p>This score considers factors like mileage, age, MOT history, and any reported incidents, giving you a quick way to assess the car's reliability.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="faq8">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse8">
+          What should I do if the mileage on my MOT certificate is incorrect?
+        </button>
+      </h2>
+      <div id="collapse8" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+        <div class="accordion-body">
+          <p>If the mileage on your MOT certificate is incorrect, report it to the DVLA or the garage that performed the MOT.</p>
+          <p>Accurate mileage is vital for a vehicle's value and history, so ensuring it is recorded correctly helps avoid future complications.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+ </section>
+
+
+<!-- FAQ Section End -->
+
+<!-- Footer Start -->
+<footer class="footer-custom bg-black text-white pt-5 pb-5">
+  <div class="container-fluid px-4 px-md-5 foot-con">
+    <div class="row">
+      <!-- Left Column: 50% Width -->
+      <div class="col-md-6 mb-4">
+        <h4 class="fw-bold" style="color: #1ABC9C; font-weight: 800; font-size: 30px; line-height: 30px;">VehicleScore</h4>
+        <p class="footer-tagline" style="color: #fff; font-weight: 400; font-size: 16px; line-height: 24px;" >Don't just buy it, VehicleScore it!</p>
+      </div>
+
+      <!-- Right Column: 50% Width -->
+      <div class="col-md-6">
+        <div class="row">
+          <div class="col-md-4 mb-3">
+            <ul class="list-unstyled footer-links">
+              <li>Home</li>
+              <li>Car Dealer Zone</li>
+              <li>MOT Check</li>
+              <li>DVLA Vehicle Check</li>
+              <li>BHP Check</li>
+              <li>Outstanding Finance Check</li>
+              <li>When is MOT Due</li>
+              <li>Import Check</li>
+              <li>Sell Your Car</li>
+              <li>Feedback</li>
+              <li><a href="mailto:info@vehiclescore.co.uk">info@vehiclescore.co.uk</a></li>
+            </ul>
+          </div>
+          <div class="col-md-4 mb-3">
+            <ul class="list-unstyled footer-links">
+              <li>Lifespan Estimates</li>
+              <li>Car Analytics Checker</li>
+              <li>Tax Check</li>
+              <li>Insurance Checker</li>
+              <li>Fuel Economy Check</li>
+              <li>CO₂ Emissions Check</li>
+              <li>Mileage Check</li>
+              <li>Stolen Vehicle Check</li>
+              <li>Car Valuation</li>
+              <li>Other</li>
+            </ul>
+          </div>
+          <div class="col-md-4 mb-3">
+            <ul class="list-unstyled footer-links">
+              <li>Join Our Affiliate Program</li>
+              <li>AI Mechanic</li>
+              <li>Check MOT and Tax</li>
+              <li>Write-Off Check</li>
+              <li>ULEZ Check</li>
+              <li>Insurance Group</li>
+              <li>Insurance Group Check</li>
+              <li>Recall Check</li>
+              <li>FAQs</li>
+              <li>Advice</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Disclaimer -->
+        <div class="row mt-3">
+          <div class="col-12">
+            <p class="footer-text">
+              VehicleScore is trademarked, and owned by VehicleScore LTD<br><br>
+              VehicleScore has an affiliate partnership with Confused.com. This means we may be paid a fee if you buy a product through the Confused.com website – but it won’t affect the price you pay.<br><br>
+              *Based on data provided by Consumer Intelligence Ltd, www.consumerintelligence.com (April ’25). 51% of Confused.com car insurance customers could save £462.49.<br>
+            </p>
+
+            <p>**84% of Motorway sellers sold their vehicle for more than the average market price valuation between Jan 2020 and October 2023 (based on two independent market pricing guides).</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom Row -->
+    <div class="row mt-4 align-items-center">
+      <!-- Bottom Left: Social Icons -->
+      <div class="col-md-6">
+        <p class="fw-bold mb-3" style="font-weight: 800; font-size: 20px; line-height: 30px;">Follow us</p>
+     <div class="d-flex justify-content-start align-items-center gap-3">
+      <a href="#" class="fs-4"><i class="fab fa-instagram"></i></a>
+      <a href="#" class="fs-4"><i class="fab fa-tiktok"></i></a>
+      <a href="#" class="facebook-icon"><i class="fab fa-facebook-f"></i></a>
+    </div>
+      </div>
+
+      <!-- Bottom Right: Legal -->
+      <div class="col-md-6 text-start mt-3 mt-md-0">
+        <p class="footer-bottom mb-0 small text-white" style="font-size: 13px; font-weight: 400; line-height: 20px;">
+          VehicleScore LTD 14822698 |
+          <a href="#" style="font-size: 13px; font-weight: 400; line-height: 20px;" class="text-white text-decoration-none">Terms and Conditions</a> |
+          <a href="#" style="font-size: 13px; font-weight: 400; line-height: 20px;" class="text-white text-decoration-none">Privacy Policy</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- Footer End -->
+
+
+
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- search bar -->
+ <script>
+  const input = document.getElementById('regInput');
+  const checkBtn = document.getElementById('checkBtn');
+  const buyBtn = document.getElementById('buyBtn');
+  const wrapper = document.getElementById('searchWrapper');
+  const errorMessage = document.getElementById('errorMessage');
+  const resultMessage = document.getElementById('resultMessage');
+
+  //  Basic UK registration pattern (e.g. AB12CDE)
+  const regPattern = /^[A-Z]{2}[0-9]{2}[A-Z]{3}$/;
+
+  function validateAndRedirect() {
+    const reg = input.value.trim().toUpperCase();
+
+    resultMessage.classList.remove('active', 'success');
+    resultMessage.textContent = '';
+
+    if (reg === '') {
+      wrapper.classList.add('error');
+      errorMessage.classList.add('active');
+      input.focus();
+      return;
+    }
+
+    wrapper.classList.remove('error');
+    errorMessage.classList.remove('active');
+
+    if (!regPattern.test(reg)) {
+      resultMessage.textContent = "Can't find that car";
+      resultMessage.classList.add('active');
+    } else {
+      //  Redirect if format is valid
+      window.location.href = `checkout.html?reg=${encodeURIComponent(reg)}`;
+    }
+  }
+
+  checkBtn.addEventListener('click', validateAndRedirect);
+  buyBtn.addEventListener('click', validateAndRedirect);
+
+  //  Clear errors as user types
+  input.addEventListener('input', function () {
+    wrapper.classList.remove('error');
+    errorMessage.classList.remove('active');
+    resultMessage.classList.remove('active', 'success');
+    resultMessage.textContent = '';
+  });
+</script>
+
+
+</body>
+</html>
