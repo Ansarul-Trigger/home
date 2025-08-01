@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>VehicleScore - Free Car Check</title>
+
+  <!-- Google Font: Nunito -->
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Font Awesome CDN -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+   <!-- Top Bar -->
+  <div class="bg-bar text-center py-1 small">
+    Over 50 Million Vehicle Scores Generated
+  </div>
+  <!-- Navbar -->
+  <nav class="navbar css-2usv4d">
+    <div class="container-fluid d-flex justify-content-between align-items-center">
+      <div class="d-flex align-items-center">
+         <!-- Hamburger Trigger -->
+            <button class="hamburger-btn me-3" data-bs-toggle="offcanvas" data-bs-target="#sidebarMenu">
+            <span></span>
+            <span></span>
+            <span></span>
+            </button>
+         <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <img src="image/carvalueio1200.png" alt="Logo" style="height: 32px;" class="me-2">
+         carvalue.io
+      </a>
+      </div>
+      <div class="d-none d-md-flex gap-3 align-items-center">
+        <a href="#" class="text-white text-decoration-none">AI Mechanic</a>
+        <a href="register.html" class="text-white text-decoration-none">Sign up</a>
+        <a href="login.html" class="btn btn-light btn-text rounded-pill custom-login-btn">Login</a>
+      </div>
+    </div>
+  </nav>
+  <!-- Sidebar -->
+  <div class="offcanvas offcanvas-start offcanvas-dark custom-offcanvas" tabindex="-1" id="sidebarMenu">
+    <div class="offcanvas-header">
+      <button type="button" class="btn-close btn-close-white ms-auto" data-bs-dismiss="offcanvas"></button>
+    </div>
+    <div class="offcanvas-body custom-sidebar">
+      <a href="#">Free Car Check</a>
+      <a href="#">MOT Check</a>
+      <a href="#">TAX Check</a>
+      <a href="#">AI Mechanic</a>
+      <a href="#">Lifespan Estimates</a>
+      <a href="#">Blogs</a>
+      <a href="login.html">Login</a>
+      <a href="register.html">Register</a>
+      <hr class="border-white" />
+      <a href="#">Customer Service</a>
+      <a href="#">Feedback</a>
+    </div>
+  </div>
+
+
+
+  <div class="register-box shadow">
+    <h3 class="fw-bold mb-1">Register</h3>
+    <p class="mb-4">Enter your details below</p>
+
+    <form id="registerForm">
+      <div class="mb-3">
+        <label class="form-label">Display Name <span class="text-muted">(optional)</span></label>
+        <input type="text" class="form-control" id="displayName" />
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Email Address <span class="text-danger">*</span></label>
+        <input type="email" class="form-control" id="email" required />
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Password <span class="text-danger">*</span></label>
+        <input type="password" class="form-control" id="password" required />
+        <small class="text-muted">Minimum 8 characters and 1 number</small>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Confirm Password <span class="text-danger">*</span></label>
+        <input type="password" class="form-control" id="confirmPassword" required />
+      </div>
+
+      <div class="form-check mb-3">
+        <input class="form-check-input" type="checkbox" id="terms" />
+        <label class="form-check-label" for="terms">
+          By ticking this, you are agreeing to our terms and conditions
+        </label>
+      </div>
+
+      <button type="submit" class="btn btn-register w-100 mb-3">Register</button>
+
+      <button class="btn btn-outline-dark w-100 mb-2 social-btn" type="button">
+        <i class="fab fa-facebook"></i> Continue with Facebook
+      </button>
+
+      <button class="btn btn-outline-dark w-100 social-btn" type="button">
+        <i class="fab fa-google"></i> Continue with Google
+      </button>
+
+      <div class="already-account">
+        <a href="login.html">Already have an account?</a>
+      </div>
+    </form>
+  </div>
+
+
+
+<!-- Footer Start -->
+<footer class="footer-custom bg-black text-white pt-5 pb-5">
+  <div class="container-fluid px-4 px-md-5 foot-con">
+    <div class="row">
+      <!-- Left Column: 50% Width -->
+      <div class="col-md-6 mb-4">
+        <a class="navbar-brand d-flex align-items-center" href="#">
+        <img src="image/carvalueio1200.png" alt="Logo" style="height: 32px;" class="me-2">
+         carvalue.io
+      </a>
+        <p class="footer-tagline" style="color: #fff; font-weight: 400; font-size: 16px; line-height: 24px;" >Don't just buy it, VehicleScore it!</p>
+      </div>
+
+      <!-- Right Column: 50% Width -->
+      <div class="col-md-6">
+        <div class="row">
+          <div class="col-md-4 mb-3">
+            <ul class="list-unstyled footer-links">
+              <li><a href="index.html" class="text-decoration-none">Home</a></li>
+              <li><a href="#" class="text-decoration-none">Car Dealer Zone</a></li>
+              <li><a href="#" class="text-decoration-none">MOT Check</a></li>
+              <li><a href="#" class="text-decoration-none">DVLA Vehicle Check</a></li>
+              <li><a href="#" class="text-decoration-none">BHP Check</a></li>
+              <li><a href="#" class="text-decoration-none">Outstanding Finance Check</a></li>
+              <li><a href="#" class="text-decoration-none">When is MOT Due</a></li>
+              <li><a href="#" class="text-decoration-none">Import Check</a></li>
+              <li><a href="#" class="text-decoration-none">Sell Your Car</a></li>
+              <li><a href="#" class="text-decoration-none">Feedback</a></li>
+              <li><a href="mailto:info@vehiclescore.co.uk">info@vehiclescore.co.uk</a></li>
+            </ul>
+          </div>
+          <div class="col-md-4 mb-3">
+            <ul class="list-unstyled footer-links">
+                <li><a href="#" class="text-decoration-none">Lifespan Estimates</a></li>
+                <li><a href="#" class="text-decoration-none">Car Analytics Checker</a></li>
+                <li><a href="#" class="text-decoration-none">Tax Check</a></li>
+                <li><a href="#" class="text-decoration-none">Insurance Checker</a></li>
+                <li><a href="#" class="text-decoration-none">Fuel Economy Check</a></li>
+                <li><a href="#" class="text-decoration-none">CO₂ Emissions Check</a></li>
+                <li><a href="#" class="text-decoration-none">Mileage Check</a></li>
+                <li><a href="#" class="text-decoration-none">Stolen Vehicle Check</a></li>
+                <li><a href="#" class="text-decoration-none">Car Valuation</a></li>
+                <li><a href="#" class="text-decoration-none">Other</a></li>
+            </ul>
+          </div>
+          <div class="col-md-4 mb-3">
+            <ul class="list-unstyled footer-links text-decoration-none">
+              <li><a href="#" class="text-decoration-none">Join Our Affiliate Program</a></li>
+              <li><a href="#" class="text-decoration-none">AI Mechanic</a></li>
+              <li><a href="#" class="text-decoration-none">Check MOT and Tax</a></li>
+              <li><a href="#" class="text-decoration-none">Write-Off Check</a></li>
+              <li><a href="#" class="text-decoration-none">ULEZ Check</a></li>
+              <li><a href="#" class="text-decoration-none">Insurance Group</a></li>
+              <li><a href="#" class="text-decoration-none">Insurance Group Check</a></li>
+              <li><a href="#" class="text-decoration-none">Recall Check</a></li>
+              <li><a href="#" class="text-decoration-none">FAQs</a></li>
+              <li><a href="#" class="text-decoration-none">Advice</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Disclaimer -->
+        <div class="row mt-3">
+          <div class="col-12">
+            <p class="footer-text">
+              VehicleScore is trademarked, and owned by VehicleScore LTD<br><br>
+              VehicleScore has an affiliate partnership with Confused.com. This means we may be paid a fee if you buy a product through the Confused.com website – but it won’t affect the price you pay.<br><br>
+              *Based on data provided by Consumer Intelligence Ltd, www.consumerintelligence.com (April ’25). 51% of Confused.com car insurance customers could save £462.49.<br>
+            </p>
+
+            <p>**84% of Motorway sellers sold their vehicle for more than the average market price valuation between Jan 2020 and October 2023 (based on two independent market pricing guides).</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom Row -->
+    <div class="row mt-4 align-items-center">
+      <!-- Bottom Left: Social Icons -->
+      <div class="col-md-6">
+        <p class="fw-bold mb-3 text-white" style="font-weight: 800; font-size: 20px; line-height: 30px;">Follow us</p>
+     <div class="d-flex justify-content-start align-items-center gap-3">
+      <a href="#" class="fs-4"><i class="fab fa-instagram"></i></a>
+      <a href="#" class="fs-4"><i class="fab fa-tiktok"></i></a>
+      <a href="#" class="facebook-icon"><i class="fab fa-facebook-f"></i></a>
+    </div>
+      </div>
+
+      <!-- Bottom Right: Legal -->
+      <div class="col-md-6 text-start mt-3 mt-md-0">
+        <p class="footer-bottom mb-0 small text-white" style="font-size: 13px; font-weight: 400; line-height: 20px;">
+          VehicleScore LTD 14822698 |
+          <a href="#" style="font-size: 13px; font-weight: 400; line-height: 20px;" class="text-white text-decoration-none">Terms and Conditions</a> |
+          <a href="#" style="font-size: 13px; font-weight: 400; line-height: 20px;" class="text-white text-decoration-none">Privacy Policy</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- Footer End -->
+
+
+
+
+
+
+
+
+
+  <script>
+    const form = document.getElementById("registerForm");
+    const registerBtn = document.querySelector(".btn-register");
+
+    const email = document.getElementById("email");
+    const password = document.getElementById("password");
+    const confirmPassword = document.getElementById("confirmPassword");
+    const terms = document.getElementById("terms");
+
+    function validateForm() {
+      const emailValid = email.value.trim() !== "";
+      const passwordValid = /^(?=.*\d).{8,}$/.test(password.value);
+      const passwordsMatch = password.value === confirmPassword.value;
+      const termsChecked = terms.checked;
+
+      return emailValid && passwordValid && passwordsMatch && termsChecked;
+    }
+
+    form.addEventListener("input", () => {
+      registerBtn.disabled = !validateForm();
+    });
+
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      if (validateForm()) {
+        alert("Registered Successfully!");
+        form.reset();
+        registerBtn.disabled = true;
+      } else {
+        alert("Please fill in the form correctly.");
+      }
+    });
+  </script>
+
+
+
+<script>
+  document.querySelector('.btn.btn-outline-dark.social-btn i.fab.fa-facebook').parentElement.addEventListener('click', function () {
+    window.location.href = 'https://www.facebook.com/v13.0/dialog/oauth?client_id=YOUR_APP_ID&redirect_uri=YOUR_REDIRECT_URI&scope=email';
+  });
+
+  document.querySelector('.btn.btn-outline-dark.social-btn i.fab.fa-google').parentElement.addEventListener('click', function () {
+    window.location.href = 'https://accounts.google.com/o/oauth2/v2/auth?client_id=YOUR_CLIENT_ID&redirect_uri=YOUR_REDIRECT_URI&response_type=code&scope=email profile';
+  });
+</script>
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

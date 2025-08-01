@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>VehicleScore - Free Car Check</title>
+
+  <!-- Google Font: Nunito -->
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Font Awesome CDN -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body class="result-body">
+  <!-- Top Bar -->
+  <div class="bg-bar text-center py-1 small">
+    Over 50 Million Vehicle Scores Generated
+  </div>
+  <!-- Navbar -->
+  <nav class="navbar css-2usv4d">
+    <div class="container-fluid d-flex justify-content-between align-items-center">
+      <div class="d-flex align-items-center">
+         <!-- Hamburger Trigger -->
+            <button class="hamburger-btn me-3" data-bs-toggle="offcanvas" data-bs-target="#sidebarMenu">
+            <span></span>
+            <span></span>
+            <span></span>
+            </button>
+         <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <img src="image/carvalueio1200.png" alt="Logo" style="height: 32px;" class="me-2">
+         carvalue.io
+      </a>
+      </div>
+      <div class="d-none d-md-flex gap-3 align-items-center">
+        <a href="#" class="text-white text-decoration-none">AI Mechanic</a>
+        <a href="register.html" class="text-white text-decoration-none">Sign up</a>
+        <a href="login.html" class="btn btn-light btn-text rounded-pill custom-login-btn">Login</a>
+      </div>
+    </div>
+  </nav>
+  <!-- Sidebar -->
+  <div class="offcanvas offcanvas-start offcanvas-dark custom-offcanvas" tabindex="-1" id="sidebarMenu">
+    <div class="offcanvas-header">
+      <button type="button" class="btn-close btn-close-white ms-auto" data-bs-dismiss="offcanvas"></button>
+    </div>
+    <div class="offcanvas-body custom-sidebar">
+      <a href="#">Free Car Check</a>
+      <a href="#">MOT Check</a>
+      <a href="#">TAX Check</a>
+      <a href="#">AI Mechanic</a>
+      <a href="#">Lifespan Estimates</a>
+      <a href="#">Blogs</a>
+      <a href="login.html">Login</a>
+      <a href="register.html">Register</a>
+      <hr class="border-white" />
+      <a href="#">Customer Service</a>
+      <a href="#">Feedback</a>
+    </div>
+  </div>
+
+   <!-- hero section -->
+
+  <div class="vehicle-menu">
+    <a id="Overview" href="#" class="active">
+      <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 256 256"><path d="M237.2,151.87v0a47.1,47.1,0,0,0-2.35-5.45L193.26,51.8a7.82,7.82,0,0,0-1.66-2.44,32,32,0,0,0-45.26,0A8,8,0,0,0,144,55V80H112V55a8,8,0,0,0-2.34-5.66,32,32,0,0,0-45.26,0,7.82,7.82,0,0,0-1.66,2.44L21.15,146.4a47.1,47.1,0,0,0-2.35,5.45v0A48,48,0,1,0,112,168V96h32v72a48,48,0,1,0,93.2-16.13ZM76.71,59.75a16,16,0,0,1,19.29-1v73.51a47.9,47.9,0,0,0-46.79-9.92ZM64,200a32,32,0,1,1,32-32A32,32,0,0,1,64,200ZM160,58.74a16,16,0,0,1,19.29,1l27.5,62.58A47.9,47.9,0,0,0,160,132.25ZM192,200a32,32,0,1,1,32-32A32,32,0,0,1,192,200Z"></path></svg><br>
+      Overview
+    </a>
+    <a id="Specs" href="#">
+      <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 256 256"><path d="M240,104H229.2L201.42,41.5A16,16,0,0,0,186.8,32H69.2a16,16,0,0,0-14.62,9.5L26.8,104H16a8,8,0,0,0,0,16h8v80a16,16,0,0,0,16,16H64a16,16,0,0,0,16-16V184h96v16a16,16,0,0,0,16,16h24a16,16,0,0,0,16-16V120h8a8,8,0,0,0,0-16ZM69.2,48H186.8l24.89,56H44.31ZM64,200H40V184H64Zm128,0V184h24v16Zm24-32H40V120H216ZM56,144a8,8,0,0,1,8-8H80a8,8,0,0,1,0,16H64A8,8,0,0,1,56,144Zm112,0a8,8,0,0,1,8-8h16a8,8,0,0,1,0,16H176A8,8,0,0,1,168,144Z"></path></svg><br>
+      Specs
+    </a>
+    <a id="Tools" href="#">
+      <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 256 256"><path d="M224,64H176V56a24,24,0,0,0-24-24H104A24,24,0,0,0,80,56v8H32A16,16,0,0,0,16,80V192a16,16,0,0,0,16,16H224a16,16,0,0,0,16-16V80A16,16,0,0,0,224,64ZM96,56a8,8,0,0,1,8-8h48a8,8,0,0,1,8,8v8H96ZM224,80v32H192v-8a8,8,0,0,0-16,0v8H80v-8a8,8,0,0,0-16,0v8H32V80Zm0,112H32V128H64v8a8,8,0,0,0,16,0v-8h96v8a8,8,0,0,0,16,0v-8h32v64Z"></path></svg><br>
+      Tools
+    </a>
+    <a id="Mileage" href="#">
+      <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 256 256"><path d="M232,208a8,8,0,0,1-8,8H32a8,8,0,0,1-8-8V48a8,8,0,0,1,16,0v94.37L90.73,98a8,8,0,0,1,10.07-.38l58.81,44.11L218.73,90a8,8,0,1,1,10.54,12l-64,56a8,8,0,0,1-10.07.38L96.39,114.29,40,163.63V200H224A8,8,0,0,1,232,208Z"></path></svg><br>
+      Mileage
+    </a>
+    <a id="MOT" href="#">
+      <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 256 256"><path d="M88,64a8,8,0,0,1,8-8H216a8,8,0,0,1,0,16H96A8,8,0,0,1,88,64Zm128,56H96a8,8,0,0,0,0,16H216a8,8,0,0,0,0-16Zm0,64H96a8,8,0,0,0,0,16H216a8,8,0,0,0,0-16ZM56,56H40a8,8,0,0,0,0,16H56a8,8,0,0,0,0-16Zm0,64H40a8,8,0,0,0,0,16H56a8,8,0,0,0,0-16Zm0,64H40a8,8,0,0,0,0,16H56a8,8,0,0,0,0-16Z"></path></svg><br>
+      MOT
+    </a>
+  </div>
+
+
+  <!-- 701 -->
+
+  <div class="container-701 py-4">
+
+    <div class="row align-items-center g-2">
+      <div class="col-md-3">
+        <div>
+          <span class="header-label">Your Score</span>
+           <span class="code-box">W4CDD</span>
+        </div>
+        <div class="score-info">
+        <div class="count-text">below average ↓ 142</div>
+        <div class="score-value" id="score">0</div>
+        <div class="score-status">Very good</div>
+      </div>
+
+      </div>
+      <div class="col-md-3 text-center">
+         <div class="top-controls">
+          <span class="theme-toggle1">
+        <label class="toggle-label" for="themeSwitch1">Light mode</label>
+        <label class="switch">
+          <input type="checkbox" id="themeSwitch1" class="theme-toggle-input">
+          <span class="slider round"></span>
+        </label>
+      </span>
+
+
+  <a href="#" class="control-link">
+    <!-- Share SVG Icon -->
+   <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 256 256" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M236.24,107.76l-80-80A6,6,0,0,0,146,32V74.2c-54.48,3.59-120.39,55-127.93,120.66a10,10,0,0,0,17.23,8h0C46.56,190.85,87,152.6,146,150.13V192a6,6,0,0,0,10.24,4.24l80-80A6,6,0,0,0,236.24,107.76ZM158,177.52V144a6,6,0,0,0-6-6c-27.73,0-54.76,7.25-80.32,21.55a193.38,193.38,0,0,0-40.81,30.65c4.7-26.56,20.16-52,44-72.27C98.47,97.94,127.29,86,152,86a6,6,0,0,0,6-6V46.49L223.51,112Z"></path></svg> 
+    Share
+  </a>
+
+  <a href="#" class="control-link">
+    <!-- Save/Bookmark SVG Icon -->
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 384 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M336 0H48C21.49 0 0 21.49 0 48v464l192-112 192 112V48c0-26.51-21.49-48-48-48zm0 428.43l-144-84-144 84V54a6 6 0 0 1 6-6h276c3.314 0 6 2.683 6 5.996V428.43z"></path></svg>
+    Save
+  </a>
+</div>
+
+         <div class="gauge-container">
+    <svg class="gauge-arc" viewBox="0 0 200 100">
+      <path d="M20,100 A80,80 0 0,1 180,100" stroke="#444" stroke-width="20" fill="none"/>
+      <path id="arc-fill" d="M20,100 A80,80 0 0,1 180,100"
+            stroke="#1ABC9C"
+            stroke-width="20"
+            fill="none"
+            stroke-dasharray="251"
+            stroke-dashoffset="251"
+            stroke-linecap="round"/>
+    </svg>
+
+    <!-- SVG Pointer -->
+    <div class="svg-pointer" id="svgPointer">
+      <svg stroke="currentColor" fill="#98999C" stroke-width="0"
+        viewBox="0 0 256 256" height="50" width="50" xmlns="http://www.w3.org/2000/svg">
+        <path d="M240,113.58a15.76,15.76,0,0,1-11.29,15l-76.56,23.56-23.56,76.56a15.77,15.77,0,0,1-15,11.29h-.3a15.77,15.77,0,0,1-15.07-10.67L33,53.41a1,1,0,0,1-.05-.16A16,16,0,0,1,53.25,32.9l.16.05L229.33,98.21A15.78,15.78,0,0,1,240,113.58Z"></path>
+      </svg>
+    </div>
+  </div>
+      </div>
+         <div class="col-md-3">
+            <div class="data-card">
+              <div class="data-text">Age</div>
+              <div class="h4">8 Yrs</div>
+              <div class="text-suss small">Great</div>
+            </div>
+          </div>
+
+      <div class="col-md-3">
+        <div class="data-card">
+          <div class="data-text">Mileage</div>
+          <div class="h4">54,065 mi</div>
+          <div class="text-suss small">Good</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom Row -->
+    <div class="row  mt-0 g-2">
+      <div class="col-md-3">
+       <div class="card-container">
+    <div class="small-box">
+      <div class="d-text">Details</div>
+      <div class="m-bold">MERCEDES-BENZ C</div>
+      <div class="mb-2">2017, White, 54,065mi</div>
+      <a href="#">Reveal ULEZ status</a>
+    </div>
+
+    <div class="status-box">
+      <span class="text-white">TAX <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" color="#1abc9c" style="color:#1abc9c" height="16" width="16" xmlns="http://www.w3.org/2000/svg"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"></path></svg></span>
+      <span class="text-white">MOT <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" color="#1abc9c" style="color:#1abc9c" height="16" width="16" xmlns="http://www.w3.org/2000/svg"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"></path></svg></span>
+      <span><a class="text-light text-decoration-none" href="#" class="text-light">HPI ⓘ</a></span>
+    </div>
+  </div> 
+       
+      </div>
+      
+
+
+      <div class="col-md-3">
+            <div class="data-card">
+             <h6>Don't part exchange your MERCEDES-BENZ</h6>
+          <p class="data-text-t">You could get £1,000's more with Motorway and can settle your finance*</p>
+          <button class="btn btn-custom-s  w-100">See Your Offer Now →</button>
+          <p class="data-center">Need more help? Email us at info@vehiclescore.co.uk for free help on getting the most for your car.</p>
+            </div>
+          </div>
+
+
+      <div class="col-md-3">
+            <div class="data-card">
+              <div class="data-text">MOT Comments</div>
+              <div class="h4">Good</div>
+              <div class="text-suss small">Based on recent MOT's</div>
+            </div>
+          </div>
+
+      <div class="col-md-3">
+        <div class="data-card">
+          <div class="text-white yerly-text">Yearly Mileage</div>
+          <div class="h4">6,758 mi</div>
+          <div class="text-suss small">Good</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+<!-- hidden history -->
+
+<div class="hidden-container">
+  <div class="hidden-container">
+  <div class="top-text">
+   <a href="">View an example of a hidden history report tap here</a> 
+  </div>
+</div>
+
+  <div class="hidden-top-section">
+
+    <div class="hidden-card" data-badge="SALE">
+      <h3>Full History Check</h3>
+      <small>Ultimate Plus</small>
+      <p class="text-white">Instant report includes:</p>
+      
+     <div class="hidden-feature-list">
+  <a href="#">
+    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 256 256"><path d="M200,48H136V16a8,8,0,0,0-16,0V48H56A32,32,0,0,0,24,80V192a32,32,0,0,0,32,32H200a32,32,0,0,0,32-32V80A32,32,0,0,0,200,48Zm16,144a16,16,0,0,1-16,16H56a16,16,0,0,1-16-16V80A16,16,0,0,1,56,64H200a16,16,0,0,1,16,16Zm-52-56H92a28,28,0,0,0,0,56h72a28,28,0,0,0,0-56Zm-24,16v24H116V152ZM80,164a12,12,0,0,1,12-12h8v24H92A12,12,0,0,1,80,164Zm84,12h-8V152h8a12,12,0,0,1,0,24ZM72,108a12,12,0,1,1,12,12A12,12,0,0,1,72,108Zm88,0a12,12,0,1,1,12,12A12,12,0,0,1,160,108Z"></path></svg>
+    NEW AI ANALYSIS
+  </a>
+
+  <a href="#">
+   <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 256 256"><path d="M184,89.57V84c0-25.08-37.83-44-88-44S8,58.92,8,84v40c0,20.89,26.25,37.49,64,42.46V172c0,25.08,37.83,44,88,44s88-18.92,88-44V132C248,111.3,222.58,94.68,184,89.57ZM232,132c0,13.22-30.79,28-72,28-3.73,0-7.43-.13-11.08-.37C170.49,151.77,184,139,184,124V105.74C213.87,110.19,232,122.27,232,132ZM72,150.25V126.46A183.74,183.74,0,0,0,96,128a183.74,183.74,0,0,0,24-1.54v23.79A163,163,0,0,1,96,152,163,163,0,0,1,72,150.25Zm96-40.32V124c0,8.39-12.41,17.4-32,22.87V123.5C148.91,120.37,159.84,115.71,168,109.93ZM96,56c41.21,0,72,14.78,72,28s-30.79,28-72,28S24,97.22,24,84,54.79,56,96,56ZM24,124V109.93c8.16,5.78,19.09,10.44,32,13.57v23.37C36.41,141.4,24,132.39,24,124Zm64,48v-4.17c2.63.1,5.29.17,8,.17,3.88,0,7.67-.13,11.39-.35A121.92,121.92,0,0,0,120,171.41v23.46C100.41,189.4,88,180.39,88,172Zm48,26.25V174.4a179.48,179.48,0,0,0,24,1.6,183.74,183.74,0,0,0,24-1.54v23.79a165.45,165.45,0,0,1-48,0Zm64-3.38V171.5c12.91-3.13,23.84-7.79,32-13.57V172C232,180.39,219.59,189.4,200,194.87Z"></path></svg>
+    Finance
+  </a>
+
+  <a href="#">
+   <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 256 256"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Zm40-104v48a8,8,0,0,1-8,8H112a8,8,0,0,1,0-16h28.69L90.34,101.66a8,8,0,0,1,11.32-11.32L152,140.69V112a8,8,0,0,1,16,0Z"></path></svg>
+    Import
+  </a>
+
+
+  <a href="#">
+   <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 256 256"><path d="M168,96v48a8,8,0,0,1-16,0V115.31l-50.34,50.35a8,8,0,0,1-11.32-11.32L140.69,104H112a8,8,0,0,1,0-16h48A8,8,0,0,1,168,96Zm64,32A104,104,0,1,1,128,24,104.11,104.11,0,0,1,232,128Zm-16,0a88,88,0,1,0-88,88A88.1,88.1,0,0,0,216,128Z"></path></svg>
+    Export
+  </a>
+
+  <a href="#">
+    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 256 256"><path d="M53.92,34.62A8,8,0,0,0,40.26,42,16,16,0,0,0,32,56v56c0,52.72,25.52,84.67,46.93,102.19,23.06,18.86,46,25.27,47,25.53a8,8,0,0,0,4.2,0c1.36-.37,31.27-8.78,57.09-34.72l14.89,16.38a8,8,0,1,0,11.84-10.76Zm74.07,189a128.48,128.48,0,0,1-38.92-21.81C61.82,179.51,48,149.3,48,112l0-56h3.71L176.41,193.15A129.26,129.26,0,0,1,128,223.62ZM224,56v56c0,20.58-3.89,39.61-11.56,56.59A8,8,0,1,1,197.86,162c6.73-14.89,10.14-31.71,10.14-50V56L98.52,56a8,8,0,1,1,0-16H208A16,16,0,0,1,224,56Z"></path></svg>
+    Stolen
+  </a>
+
+  <a href="#">
+    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 256 256"><path d="M216,48H176V40a24,24,0,0,0-24-24H104A24,24,0,0,0,80,40v8H40a8,8,0,0,0,0,16h8V208a16,16,0,0,0,16,16H192a16,16,0,0,0,16-16V64h8a8,8,0,0,0,0-16ZM96,40a8,8,0,0,1,8-8h48a8,8,0,0,1,8,8v8H96Zm96,168H64V64H192ZM112,104v64a8,8,0,0,1-16,0V104a8,8,0,0,1,16,0Zm48,0v64a8,8,0,0,1-16,0V104a8,8,0,0,1,16,0Z"></path></svg>
+    Scrapped
+  </a>
+
+  <a href="#">
+   <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 256 256"><path d="M243.31,136,144,36.69A15.86,15.86,0,0,0,132.69,32H40a8,8,0,0,0-8,8v92.69A15.86,15.86,0,0,0,36.69,144L136,243.31a16,16,0,0,0,22.63,0l84.68-84.68a16,16,0,0,0,0-22.63Zm-96,96L48,132.69V48h84.69L232,147.31ZM96,84A12,12,0,1,1,84,72,12,12,0,0,1,96,84Z"></path></svg>
+    Category
+  </a>
+
+  <a href="#">
+    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 256 256"><path d="M236.8,188.09,149.35,36.22h0a24.76,24.76,0,0,0-42.7,0L19.2,188.09a23.51,23.51,0,0,0,0,23.72A24.35,24.35,0,0,0,40.55,224h174.9a24.35,24.35,0,0,0,21.33-12.19A23.51,23.51,0,0,0,236.8,188.09ZM222.93,203.8a8.5,8.5,0,0,1-7.48,4.2H40.55a8.5,8.5,0,0,1-7.48-4.2,7.59,7.59,0,0,1,0-7.72L120.52,44.21a8.75,8.75,0,0,1,15,0l87.45,151.87A7.59,7.59,0,0,1,222.93,203.8ZM120,144V104a8,8,0,0,1,16,0v40a8,8,0,0,1-16,0Zm20,36a12,12,0,1,1-12-12A12,12,0,0,1,140,180Z"></path></svg>
+    Write-off
+  </a>
+
+  <a href="#">
+    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 256 256"><path d="M240,104H228.64L201.25,56.06A16,16,0,0,0,187.36,48H165.42l-12-29.94A15.93,15.93,0,0,0,138.58,8H117.42a15.93,15.93,0,0,0-14.86,10.06L90.58,48H68.64a16,16,0,0,0-13.89,8.06L27.36,104H16a8,8,0,0,0,0,16h8v80a16,16,0,0,0,16,16H64a16,16,0,0,0,16-16V184h96v16a16,16,0,0,0,16,16h24a16,16,0,0,0,16-16V120h8a8,8,0,0,0,0-16ZM117.42,24h21.16l9.6,24H107.82ZM68.64,64H187.36l22.85,40H45.79ZM64,200H40V184H64Zm128,0V184h24v16Zm24-32H40V120H216ZM56,144a8,8,0,0,1,8-8H80a8,8,0,0,1,0,16H64A8,8,0,0,1,56,144Zm112,0a8,8,0,0,1,8-8h16a8,8,0,0,1,0,16H176A8,8,0,0,1,168,144Z"></path></svg>
+    Ex-Taxi
+  </a>
+
+  <a href="#">
+    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 256 256"><path d="M200.77,53.89A103.27,103.27,0,0,0,128,24h-1.07A104,104,0,0,0,24,128c0,43,26.58,79.06,69.36,94.17A32,32,0,0,0,136,192a16,16,0,0,1,16-16h46.21a31.81,31.81,0,0,0,31.2-24.88,104.43,104.43,0,0,0,2.59-24A103.28,103.28,0,0,0,200.77,53.89Zm13,93.71A15.89,15.89,0,0,1,198.21,160H152a32,32,0,0,0-32,32,16,16,0,0,1-21.31,15.07C62.49,194.3,40,164,40,128a88,88,0,0,1,87.09-88h.9a88.35,88.35,0,0,1,88,87.25A88.86,88.86,0,0,1,213.81,147.6ZM140,76a12,12,0,1,1-12-12A12,12,0,0,1,140,76ZM96,100A12,12,0,1,1,84,88,12,12,0,0,1,96,100Zm0,56a12,12,0,1,1-12-12A12,12,0,0,1,96,156Zm88-56a12,12,0,1,1-12-12A12,12,0,0,1,184,100Z"></path></svg>
+    Colour Changes
+  </a>
+
+  <a href="#">
+    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 256 256"><path d="M240,104H229.2L201.42,41.5A16,16,0,0,0,186.8,32H69.2a16,16,0,0,0-14.62,9.5L26.8,104H16a8,8,0,0,0,0,16h8v80a16,16,0,0,0,16,16H64a16,16,0,0,0,16-16V184h96v16a16,16,0,0,0,16,16h24a16,16,0,0,0,16-16V120h8a8,8,0,0,0,0-16ZM69.2,48H186.8l24.89,56H44.31ZM64,200H40V184H64Zm128,0V184h24v16Zm24-32H40V120H216ZM56,144a8,8,0,0,1,8-8H80a8,8,0,0,1,0,16H64A8,8,0,0,1,56,144Zm112,0a8,8,0,0,1,8-8h16a8,8,0,0,1,0,16H176A8,8,0,0,1,168,144Z"></path></svg>
+    Salvage Check
+  </a>
+
+  <a href="#">
+    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 256 256"><path d="M224,200h-8V40a8,8,0,0,0-8-8H152a8,8,0,0,0-8,8V80H96a8,8,0,0,0-8,8v40H48a8,8,0,0,0-8,8v64H32a8,8,0,0,0,0,16H224a8,8,0,0,0,0-16ZM160,48h40V200H160ZM104,96h40V200H104ZM56,144H88v56H56Z"></path></svg>
+    Score Breakdown
+  </a>
+
+  <a href="#">
+    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 256 256"><path d="M75.19,198.4a8,8,0,0,0,11.21-1.6,52,52,0,0,1,83.2,0,8,8,0,1,0,12.8-9.6A67.88,67.88,0,0,0,155,165.51a40,40,0,1,0-53.94,0A67.88,67.88,0,0,0,73.6,187.2,8,8,0,0,0,75.19,198.4ZM128,112a24,24,0,1,1-24,24A24,24,0,0,1,128,112Zm72-88H56A16,16,0,0,0,40,40V216a16,16,0,0,0,16,16H200a16,16,0,0,0,16-16V40A16,16,0,0,0,200,24Zm0,192H56V40H200ZM88,64a8,8,0,0,1,8-8h64a8,8,0,0,1,0,16H96A8,8,0,0,1,88,64Z"></path></svg>
+    Vin Confirmation
+  </a>
+
+  <a href="#">
+   <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 256 256"><path d="M208,40H48A16,16,0,0,0,32,56v56c0,52.72,25.52,84.67,46.93,102.19,23.06,18.86,46,25.26,47,25.53a8,8,0,0,0,4.2,0c1-.27,23.91-6.67,47-25.53C198.48,196.67,224,164.72,224,112V56A16,16,0,0,0,208,40Zm0,72c0,37.07-13.66,67.16-40.6,89.42A129.3,129.3,0,0,1,128,223.62a128.25,128.25,0,0,1-38.92-21.81C61.82,179.51,48,149.3,48,112l0-56,160,0ZM82.34,141.66a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35a8,8,0,0,1,11.32,11.32l-56,56a8,8,0,0,1-11.32,0Z"></path></svg>
+    £10,000 Data Cover
+  </a>
+
+  <a href="#">
+    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 256 256"><path d="M200,168a48.05,48.05,0,0,1-48,48H136v16a8,8,0,0,1-16,0V216H104a48.05,48.05,0,0,1-48-48,8,8,0,0,1,16,0,32,32,0,0,0,32,32h48a32,32,0,0,0,0-64H112a48,48,0,0,1,0-96h8V24a8,8,0,0,1,16,0V40h8a48.05,48.05,0,0,1,48,48,8,8,0,0,1-16,0,32,32,0,0,0-32-32H112a32,32,0,0,0,0,64h40A48.05,48.05,0,0,1,200,168Z"></path></svg>
+    8 Point Price Valuation
+  </a>
+
+    </div>
+
+
+      <div class="hidden-offer">Buy One, Get 50% Off Your Second Report</div>
+      <button class="hidden-price-btn">Reveal My Report – £10.95 <strike>£11.95</strike> </button>
+
+    </div>
+
+    <div class="hidden-card" data-badge="REFUND">
+      <h3>Full History Check</h3>
+      <small class="money">Money back if no hidden history!</small>
+     <p class="text-white">Instant report includes:</p>
+      <div class="hidden-feature-list">
+  <a href="#">
+    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 256 256"><path d="M200,48H136V16a8,8,0,0,0-16,0V48H56A32,32,0,0,0,24,80V192a32,32,0,0,0,32,32H200a32,32,0,0,0,32-32V80A32,32,0,0,0,200,48Zm16,144a16,16,0,0,1-16,16H56a16,16,0,0,1-16-16V80A16,16,0,0,1,56,64H200a16,16,0,0,1,16,16Zm-52-56H92a28,28,0,0,0,0,56h72a28,28,0,0,0,0-56Zm-24,16v24H116V152ZM80,164a12,12,0,0,1,12-12h8v24H92A12,12,0,0,1,80,164Zm84,12h-8V152h8a12,12,0,0,1,0,24ZM72,108a12,12,0,1,1,12,12A12,12,0,0,1,72,108Zm88,0a12,12,0,1,1,12,12A12,12,0,0,1,160,108Z"></path></svg>
+    NEW AI ANALYSIS
+  </a>
+
+  <a href="#">
+   <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 256 256"><path d="M184,89.57V84c0-25.08-37.83-44-88-44S8,58.92,8,84v40c0,20.89,26.25,37.49,64,42.46V172c0,25.08,37.83,44,88,44s88-18.92,88-44V132C248,111.3,222.58,94.68,184,89.57ZM232,132c0,13.22-30.79,28-72,28-3.73,0-7.43-.13-11.08-.37C170.49,151.77,184,139,184,124V105.74C213.87,110.19,232,122.27,232,132ZM72,150.25V126.46A183.74,183.74,0,0,0,96,128a183.74,183.74,0,0,0,24-1.54v23.79A163,163,0,0,1,96,152,163,163,0,0,1,72,150.25Zm96-40.32V124c0,8.39-12.41,17.4-32,22.87V123.5C148.91,120.37,159.84,115.71,168,109.93ZM96,56c41.21,0,72,14.78,72,28s-30.79,28-72,28S24,97.22,24,84,54.79,56,96,56ZM24,124V109.93c8.16,5.78,19.09,10.44,32,13.57v23.37C36.41,141.4,24,132.39,24,124Zm64,48v-4.17c2.63.1,5.29.17,8,.17,3.88,0,7.67-.13,11.39-.35A121.92,121.92,0,0,0,120,171.41v23.46C100.41,189.4,88,180.39,88,172Zm48,26.25V174.4a179.48,179.48,0,0,0,24,1.6,183.74,183.74,0,0,0,24-1.54v23.79a165.45,165.45,0,0,1-48,0Zm64-3.38V171.5c12.91-3.13,23.84-7.79,32-13.57V172C232,180.39,219.59,189.4,200,194.87Z"></path></svg>
+    Finance
+  </a>
+
+  <a href="#">
+   <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 256 256"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Zm40-104v48a8,8,0,0,1-8,8H112a8,8,0,0,1,0-16h28.69L90.34,101.66a8,8,0,0,1,11.32-11.32L152,140.69V112a8,8,0,0,1,16,0Z"></path></svg>
+    Import
+  </a>
+
+
+  <a href="#">
+   <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 256 256"><path d="M168,96v48a8,8,0,0,1-16,0V115.31l-50.34,50.35a8,8,0,0,1-11.32-11.32L140.69,104H112a8,8,0,0,1,0-16h48A8,8,0,0,1,168,96Zm64,32A104,104,0,1,1,128,24,104.11,104.11,0,0,1,232,128Zm-16,0a88,88,0,1,0-88,88A88.1,88.1,0,0,0,216,128Z"></path></svg>
+    Export
+  </a>
+
+  <a href="#">
+    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 256 256"><path d="M53.92,34.62A8,8,0,0,0,40.26,42,16,16,0,0,0,32,56v56c0,52.72,25.52,84.67,46.93,102.19,23.06,18.86,46,25.27,47,25.53a8,8,0,0,0,4.2,0c1.36-.37,31.27-8.78,57.09-34.72l14.89,16.38a8,8,0,1,0,11.84-10.76Zm74.07,189a128.48,128.48,0,0,1-38.92-21.81C61.82,179.51,48,149.3,48,112l0-56h3.71L176.41,193.15A129.26,129.26,0,0,1,128,223.62ZM224,56v56c0,20.58-3.89,39.61-11.56,56.59A8,8,0,1,1,197.86,162c6.73-14.89,10.14-31.71,10.14-50V56L98.52,56a8,8,0,1,1,0-16H208A16,16,0,0,1,224,56Z"></path></svg>
+    Stolen
+  </a>
+
+  <a href="#">
+    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 256 256"><path d="M216,48H176V40a24,24,0,0,0-24-24H104A24,24,0,0,0,80,40v8H40a8,8,0,0,0,0,16h8V208a16,16,0,0,0,16,16H192a16,16,0,0,0,16-16V64h8a8,8,0,0,0,0-16ZM96,40a8,8,0,0,1,8-8h48a8,8,0,0,1,8,8v8H96Zm96,168H64V64H192ZM112,104v64a8,8,0,0,1-16,0V104a8,8,0,0,1,16,0Zm48,0v64a8,8,0,0,1-16,0V104a8,8,0,0,1,16,0Z"></path></svg>
+    Scrapped
+  </a>
+
+  <a href="#">
+   <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 256 256"><path d="M243.31,136,144,36.69A15.86,15.86,0,0,0,132.69,32H40a8,8,0,0,0-8,8v92.69A15.86,15.86,0,0,0,36.69,144L136,243.31a16,16,0,0,0,22.63,0l84.68-84.68a16,16,0,0,0,0-22.63Zm-96,96L48,132.69V48h84.69L232,147.31ZM96,84A12,12,0,1,1,84,72,12,12,0,0,1,96,84Z"></path></svg>
+    Category
+  </a>
+
+  <a href="#">
+    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 256 256"><path d="M236.8,188.09,149.35,36.22h0a24.76,24.76,0,0,0-42.7,0L19.2,188.09a23.51,23.51,0,0,0,0,23.72A24.35,24.35,0,0,0,40.55,224h174.9a24.35,24.35,0,0,0,21.33-12.19A23.51,23.51,0,0,0,236.8,188.09ZM222.93,203.8a8.5,8.5,0,0,1-7.48,4.2H40.55a8.5,8.5,0,0,1-7.48-4.2,7.59,7.59,0,0,1,0-7.72L120.52,44.21a8.75,8.75,0,0,1,15,0l87.45,151.87A7.59,7.59,0,0,1,222.93,203.8ZM120,144V104a8,8,0,0,1,16,0v40a8,8,0,0,1-16,0Zm20,36a12,12,0,1,1-12-12A12,12,0,0,1,140,180Z"></path></svg>
+    Write-off
+  </a>
+
+  <a href="#">
+    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 256 256"><path d="M240,104H228.64L201.25,56.06A16,16,0,0,0,187.36,48H165.42l-12-29.94A15.93,15.93,0,0,0,138.58,8H117.42a15.93,15.93,0,0,0-14.86,10.06L90.58,48H68.64a16,16,0,0,0-13.89,8.06L27.36,104H16a8,8,0,0,0,0,16h8v80a16,16,0,0,0,16,16H64a16,16,0,0,0,16-16V184h96v16a16,16,0,0,0,16,16h24a16,16,0,0,0,16-16V120h8a8,8,0,0,0,0-16ZM117.42,24h21.16l9.6,24H107.82ZM68.64,64H187.36l22.85,40H45.79ZM64,200H40V184H64Zm128,0V184h24v16Zm24-32H40V120H216ZM56,144a8,8,0,0,1,8-8H80a8,8,0,0,1,0,16H64A8,8,0,0,1,56,144Zm112,0a8,8,0,0,1,8-8h16a8,8,0,0,1,0,16H176A8,8,0,0,1,168,144Z"></path></svg>
+    Ex-Taxi
+  </a>
+
+  <a href="#">
+    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 256 256"><path d="M200.77,53.89A103.27,103.27,0,0,0,128,24h-1.07A104,104,0,0,0,24,128c0,43,26.58,79.06,69.36,94.17A32,32,0,0,0,136,192a16,16,0,0,1,16-16h46.21a31.81,31.81,0,0,0,31.2-24.88,104.43,104.43,0,0,0,2.59-24A103.28,103.28,0,0,0,200.77,53.89Zm13,93.71A15.89,15.89,0,0,1,198.21,160H152a32,32,0,0,0-32,32,16,16,0,0,1-21.31,15.07C62.49,194.3,40,164,40,128a88,88,0,0,1,87.09-88h.9a88.35,88.35,0,0,1,88,87.25A88.86,88.86,0,0,1,213.81,147.6ZM140,76a12,12,0,1,1-12-12A12,12,0,0,1,140,76ZM96,100A12,12,0,1,1,84,88,12,12,0,0,1,96,100Zm0,56a12,12,0,1,1-12-12A12,12,0,0,1,96,156Zm88-56a12,12,0,1,1-12-12A12,12,0,0,1,184,100Z"></path></svg>
+    Colour Changes
+  </a>
+
+  <a href="#">
+    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 256 256"><path d="M240,104H229.2L201.42,41.5A16,16,0,0,0,186.8,32H69.2a16,16,0,0,0-14.62,9.5L26.8,104H16a8,8,0,0,0,0,16h8v80a16,16,0,0,0,16,16H64a16,16,0,0,0,16-16V184h96v16a16,16,0,0,0,16,16h24a16,16,0,0,0,16-16V120h8a8,8,0,0,0,0-16ZM69.2,48H186.8l24.89,56H44.31ZM64,200H40V184H64Zm128,0V184h24v16Zm24-32H40V120H216ZM56,144a8,8,0,0,1,8-8H80a8,8,0,0,1,0,16H64A8,8,0,0,1,56,144Zm112,0a8,8,0,0,1,8-8h16a8,8,0,0,1,0,16H176A8,8,0,0,1,168,144Z"></path></svg>
+    Salvage Check
+  </a>
+
+  <a href="#">
+    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 256 256"><path d="M224,200h-8V40a8,8,0,0,0-8-8H152a8,8,0,0,0-8,8V80H96a8,8,0,0,0-8,8v40H48a8,8,0,0,0-8,8v64H32a8,8,0,0,0,0,16H224a8,8,0,0,0,0-16ZM160,48h40V200H160ZM104,96h40V200H104ZM56,144H88v56H56Z"></path></svg>
+    Score Breakdown
+  </a>
+
+  <a href="#">
+    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 256 256"><path d="M75.19,198.4a8,8,0,0,0,11.21-1.6,52,52,0,0,1,83.2,0,8,8,0,1,0,12.8-9.6A67.88,67.88,0,0,0,155,165.51a40,40,0,1,0-53.94,0A67.88,67.88,0,0,0,73.6,187.2,8,8,0,0,0,75.19,198.4ZM128,112a24,24,0,1,1-24,24A24,24,0,0,1,128,112Zm72-88H56A16,16,0,0,0,40,40V216a16,16,0,0,0,16,16H200a16,16,0,0,0,16-16V40A16,16,0,0,0,200,24Zm0,192H56V40H200ZM88,64a8,8,0,0,1,8-8h64a8,8,0,0,1,0,16H96A8,8,0,0,1,88,64Z"></path></svg>
+    Vin Confirmation
+  </a>
+
+  <a href="#">
+   <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 256 256"><path d="M208,40H48A16,16,0,0,0,32,56v56c0,52.72,25.52,84.67,46.93,102.19,23.06,18.86,46,25.26,47,25.53a8,8,0,0,0,4.2,0c1-.27,23.91-6.67,47-25.53C198.48,196.67,224,164.72,224,112V56A16,16,0,0,0,208,40Zm0,72c0,37.07-13.66,67.16-40.6,89.42A129.3,129.3,0,0,1,128,223.62a128.25,128.25,0,0,1-38.92-21.81C61.82,179.51,48,149.3,48,112l0-56,160,0ZM82.34,141.66a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35a8,8,0,0,1,11.32,11.32l-56,56a8,8,0,0,1-11.32,0Z"></path></svg>
+    £10,000 Data Cover
+  </a>
+
+  <a href="#">
+    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 256 256"><path d="M200,168a48.05,48.05,0,0,1-48,48H136v16a8,8,0,0,1-16,0V216H104a48.05,48.05,0,0,1-48-48,8,8,0,0,1,16,0,32,32,0,0,0,32,32h48a32,32,0,0,0,0-64H112a48,48,0,0,1,0-96h8V24a8,8,0,0,1,16,0V40h8a48.05,48.05,0,0,1,48,48,8,8,0,0,1-16,0,32,32,0,0,0-32-32H112a32,32,0,0,0,0,64h40A48.05,48.05,0,0,1,200,168Z"></path></svg>
+    8 Point Price Valuation
+  </a>
+
+</div>
+
+
+
+      <div class="hidden-offer">Buy One, Get 50% Off Your Second Report</div>
+       <button class="hidden-price-btn">Reveal My Report – £18.45 </button>
+      <div class="hidden-note">
+        Get a refund if your report is clear of any: <br />
+        <strong>Write-Off, Finance, Salvage, Stolen, Import, Export or Reg Change</strong>.
+      </div>
+    </div>
+  </div>
+
+  <div class="hidden-bottom-section">
+    <div class="hidden-box">
+      <h4>Positive Points <span class="hidden-badge">5</span></h4>
+      <ul>
+        <li>Long Term Owner</li>
+        <li>Last MOT had no comments</li>
+        <li>Recent MOT's pass rate is high</li>
+        <li>Mileage is between 50,000 & 80,000</li>
+        <li>Average yearly mileage is perfect!</li>
+      </ul>
+    </div>
+    <div class="hidden-box">
+      <h4>Negative Points <span class="hidden-badge red">1</span></h4>
+      <ul>
+        <li>Over 2 fail comments on recent MOT's</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="hidden-disclaimer">
+    These insights are an indicator of a vehicle's past. We would advise reviewing the full MOT history for more information.
+  </div>
+</div>
+
+
+
+
+
+
+
+<!-- Footer Start -->
+<footer class="footer-custom bg-black text-white pt-5 pb-5">
+  <div class="container-fluid px-4 px-md-5 foot-con">
+    <div class="row">
+      <!-- Left Column: 50% Width -->
+      <div class="col-md-6 mb-4">
+        <a class="navbar-brand d-flex align-items-center" href="#">
+        <img src="image/carvalueio1200.png" alt="Logo" style="height: 32px;" class="me-2">
+         carvalue.io
+      </a>
+        <p class="footer-tagline" style="color: #fff; font-weight: 400; font-size: 16px; line-height: 24px;" >Don't just buy it, VehicleScore it!</p>
+      </div>
+
+      <!-- Right Column: 50% Width -->
+      <div class="col-md-6">
+        <div class="row">
+          <div class="col-md-4 mb-3">
+            <ul class="list-unstyled footer-links">
+              <li><a href="index.html" class="text-decoration-none">Home</a></li>
+              <li><a href="#" class="text-decoration-none">Car Dealer Zone</a></li>
+              <li><a href="#" class="text-decoration-none">MOT Check</a></li>
+              <li><a href="#" class="text-decoration-none">DVLA Vehicle Check</a></li>
+              <li><a href="#" class="text-decoration-none">BHP Check</a></li>
+              <li><a href="#" class="text-decoration-none">Outstanding Finance Check</a></li>
+              <li><a href="#" class="text-decoration-none">When is MOT Due</a></li>
+              <li><a href="#" class="text-decoration-none">Import Check</a></li>
+              <li><a href="#" class="text-decoration-none">Sell Your Car</a></li>
+              <li><a href="#" class="text-decoration-none">Feedback</a></li>
+              <li><a href="mailto:info@vehiclescore.co.uk">info@vehiclescore.co.uk</a></li>
+            </ul>
+          </div>
+          <div class="col-md-4 mb-3">
+            <ul class="list-unstyled footer-links">
+                <li><a href="#" class="text-decoration-none">Lifespan Estimates</a></li>
+                <li><a href="#" class="text-decoration-none">Car Analytics Checker</a></li>
+                <li><a href="#" class="text-decoration-none">Tax Check</a></li>
+                <li><a href="#" class="text-decoration-none">Insurance Checker</a></li>
+                <li><a href="#" class="text-decoration-none">Fuel Economy Check</a></li>
+                <li><a href="#" class="text-decoration-none">CO₂ Emissions Check</a></li>
+                <li><a href="#" class="text-decoration-none">Mileage Check</a></li>
+                <li><a href="#" class="text-decoration-none">Stolen Vehicle Check</a></li>
+                <li><a href="#" class="text-decoration-none">Car Valuation</a></li>
+                <li><a href="#" class="text-decoration-none">Other</a></li>
+            </ul>
+          </div>
+          <div class="col-md-4 mb-3">
+            <ul class="list-unstyled footer-links text-decoration-none">
+              <li><a href="#" class="text-decoration-none">Join Our Affiliate Program</a></li>
+              <li><a href="#" class="text-decoration-none">AI Mechanic</a></li>
+              <li><a href="#" class="text-decoration-none">Check MOT and Tax</a></li>
+              <li><a href="#" class="text-decoration-none">Write-Off Check</a></li>
+              <li><a href="#" class="text-decoration-none">ULEZ Check</a></li>
+              <li><a href="#" class="text-decoration-none">Insurance Group</a></li>
+              <li><a href="#" class="text-decoration-none">Insurance Group Check</a></li>
+              <li><a href="#" class="text-decoration-none">Recall Check</a></li>
+              <li><a href="#" class="text-decoration-none">FAQs</a></li>
+              <li><a href="#" class="text-decoration-none">Advice</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Disclaimer -->
+        <div class="row mt-3">
+          <div class="col-12">
+            <p class="footer-text">
+              VehicleScore is trademarked, and owned by VehicleScore LTD<br><br>
+              VehicleScore has an affiliate partnership with Confused.com. This means we may be paid a fee if you buy a product through the Confused.com website – but it won’t affect the price you pay.<br><br>
+              *Based on data provided by Consumer Intelligence Ltd, www.consumerintelligence.com (April ’25). 51% of Confused.com car insurance customers could save £462.49.<br>
+            </p>
+
+            <p>**84% of Motorway sellers sold their vehicle for more than the average market price valuation between Jan 2020 and October 2023 (based on two independent market pricing guides).</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom Row -->
+    <div class="row mt-4 align-items-center">
+      <!-- Bottom Left: Social Icons -->
+      <div class="col-md-6">
+        <p class="fw-bold mb-3 text-white" style="font-weight: 800; font-size: 20px; line-height: 30px;">Follow us</p>
+     <div class="d-flex justify-content-start align-items-center gap-3">
+      <a href="#" class="fs-4"><i class="fab fa-instagram"></i></a>
+      <a href="#" class="fs-4"><i class="fab fa-tiktok"></i></a>
+      <a href="#" class="facebook-icon"><i class="fab fa-facebook-f"></i></a>
+    </div>
+      </div>
+
+      <!-- Bottom Right: Legal -->
+      <div class="col-md-6 text-start mt-3 mt-md-0">
+        <p class="footer-bottom mb-0 small text-white" style="font-size: 13px; font-weight: 400; line-height: 20px;">
+          VehicleScore LTD 14822698 |
+          <a href="#" style="font-size: 13px; font-weight: 400; line-height: 20px;" class="text-white text-decoration-none">Terms and Conditions</a> |
+          <a href="#" style="font-size: 13px; font-weight: 400; line-height: 20px;" class="text-white text-decoration-none">Privacy Policy</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- Footer End -->
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- progress bar -->
+
+<script>
+    function toggleLightMode() {
+      document.body.classList.toggle("bg-light");
+      document.body.classList.toggle("text-dark");
+    }
+  </script>
+
+<script>
+    const scoreEl = document.getElementById("score");
+    const arc = document.getElementById("arc-fill");
+    const svgPointer = document.getElementById("svgPointer");
+
+    const targetScore = 701;
+    const maxScore = 850;
+    const percent = targetScore / maxScore;
+
+    // Animate number
+    let current = 0;
+    const interval = setInterval(() => {
+      current += 5;
+      if (current >= targetScore) {
+        current = targetScore;
+        clearInterval(interval);
+      }
+      scoreEl.textContent = current;
+    }, 20);
+
+    // Animate arc fill
+    const arcLength = 251;
+    const targetOffset = arcLength * (1 - percent);
+    let currentOffset = arcLength;
+
+    const animation = setInterval(() => {
+      currentOffset -= 3;
+      if (currentOffset <= targetOffset) {
+        currentOffset = targetOffset;
+        clearInterval(animation);
+      }
+      arc.style.strokeDashoffset = currentOffset;
+    }, 10);
+
+    // Rotate SVG pointer to match arc progress (from -90deg to 90deg)
+    const angle = -90 + (180 * percent);
+    setTimeout(() => {
+      svgPointer.style.transform = `translate(-50%, 50%) rotate(${angle}deg)`;
+    }, 500);
+  </script>
+
+
+
+<script>
+  const themeSwitch = document.getElementById('themeSwitch1');
+  const body = document.body;
+
+  // Default dark
+  body.classList.add('dark-mode');
+
+  themeSwitch.addEventListener('change', () => {
+    body.classList.toggle('dark-mode');
+  });
+</script>
+
+</body>
+</html>
