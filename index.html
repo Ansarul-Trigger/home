@@ -32,15 +32,15 @@
             <span></span>
             <span></span>
             </button>
-         <a class="navbar-brand d-flex align-items-center" href="#">
+         <a class="navbar-brand d-flex align-items-center" href="index.html">
         <img src="image/carvalueio1200.png" alt="Logo" style="height: 32px;" class="me-2">
          carvalue.io
       </a>
       </div>
       <div class="d-none d-md-flex gap-3 align-items-center">
         <a href="#" class="text-white text-decoration-none">AI Mechanic</a>
-        <a href="#" class="text-white text-decoration-none">Sign up</a>
-        <button class="btn btn-light btn-text rounded-pill custom-login-btn">Login</button>
+        <a href="register.html" class="text-white text-decoration-none">Sign up</a>
+        <a href="login.html" class="btn btn-light btn-text rounded-pill custom-login-btn">Login</a>
       </div>
     </div>
   </nav>
@@ -56,8 +56,8 @@
       <a href="#">AI Mechanic</a>
       <a href="#">Lifespan Estimates</a>
       <a href="#">Blogs</a>
-      <a href="#">Login</a>
-      <a href="#">Register</a>
+      <a href="login.html">Login</a>
+      <a href="register.html">Register</a>
       <hr class="border-white" />
       <a href="#">Customer Service</a>
       <a href="#">Feedback</a>
@@ -65,6 +65,14 @@
   </div>
 <!-- hero section -->
 <div class="container-full bg-hero text-center position-relative d-flex flex-column justify-content-center" style="height: 70vh; overflow: hidden;">
+  <div class="theme-toggle">
+  <label class="toggle-label" for="themeSwitch">Light mode</label>
+  <label class="switch">
+    <input type="checkbox" id="themeSwitch">
+    <span class="slider round"></span>
+  </label>
+</div>
+
   <h1 class="fw-bold fw-heading">Free Car Check</h1>
   <p class="fw-text">Enter your reg number for a Car Check</p>
      <!-- search bar -->
@@ -95,6 +103,10 @@
         <div class="position-absolute bottom-5 end-0 me-0 mb-5 d-lg-none cart-img-bttom">
         <img src="image/mobile-car.png" alt="Car Image" class="img-fluid cart-img" />
        </div>
+      
+
+
+
 
 </div>
 <!-- Car Check section -->
@@ -149,9 +161,9 @@
 <!-- Free Car Check Section -->
 <section class="car-check-section">
   <div class="container">
-    <div class="row bg-white p-4 rounded">
+    <div class="row bg-white p-4 rounded dark-free">
       <!-- Text Content -->
-      <div class="col-md-7 text-black">
+      <div class="col-md-7 text-black dark-text">
         <h2 class="mb-3">What's included in our Free Car Check?</h2>
         <p class="mb-4">Discover the wealth of insights provided by our comprehensive vehicle check, powered by DVLA data. Our free report delivers a detailed breakdown of crucial car information, including:</p>
         <ul class="list-unstyled car-check-list">
@@ -187,10 +199,10 @@
 
 <!-- History Report -->
 <section class="history-report">
- <div class="container main-section">
+ <div class="container main-section ">
     <div class="row">
       <div class="col-lg-8 mb-4 text-black">
-        <div class="content-box">
+        <div class="content-box dark-history">
           <h1>Instant UK Vehicle History Report</h1>
           <p>Checking a car can feel overwhelming, especially with countless websites offering similar services. VehicleScore makes this process simple, even for those with limited car knowledge. Our innovative car check service gathers all the available data and presents it as a straightforward, easy-to-understand score—just like a credit score.</p>
 
@@ -417,7 +429,10 @@ An HPI check uncovers important details like outstanding finance or write-off re
     <div class="row">
       <!-- Left Column: 50% Width -->
       <div class="col-md-6 mb-4">
-        <h4 class="fw-bold" style="color: #1ABC9C; font-weight: 800; font-size: 30px; line-height: 30px;">VehicleScore</h4>
+        <a class="navbar-brand d-flex align-items-center" href="#">
+        <img src="image/carvalueio1200.png" alt="Logo" style="height: 32px;" class="me-2">
+         carvalue.io
+      </a>
         <p class="footer-tagline" style="color: #fff; font-weight: 400; font-size: 16px; line-height: 24px;" >Don't just buy it, VehicleScore it!</p>
       </div>
 
@@ -426,45 +441,45 @@ An HPI check uncovers important details like outstanding finance or write-off re
         <div class="row">
           <div class="col-md-4 mb-3">
             <ul class="list-unstyled footer-links">
-              <li>Home</li>
-              <li>Car Dealer Zone</li>
-              <li>MOT Check</li>
-              <li>DVLA Vehicle Check</li>
-              <li>BHP Check</li>
-              <li>Outstanding Finance Check</li>
-              <li>When is MOT Due</li>
-              <li>Import Check</li>
-              <li>Sell Your Car</li>
-              <li>Feedback</li>
+              <li><a href="index.html" class="text-decoration-none">Home</a></li>
+              <li><a href="#" class="text-decoration-none">Car Dealer Zone</a></li>
+              <li><a href="#" class="text-decoration-none">MOT Check</a></li>
+              <li><a href="#" class="text-decoration-none">DVLA Vehicle Check</a></li>
+              <li><a href="#" class="text-decoration-none">BHP Check</a></li>
+              <li><a href="#" class="text-decoration-none">Outstanding Finance Check</a></li>
+              <li><a href="#" class="text-decoration-none">When is MOT Due</a></li>
+              <li><a href="#" class="text-decoration-none">Import Check</a></li>
+              <li><a href="#" class="text-decoration-none">Sell Your Car</a></li>
+              <li><a href="#" class="text-decoration-none">Feedback</a></li>
               <li><a href="mailto:info@vehiclescore.co.uk">info@vehiclescore.co.uk</a></li>
             </ul>
           </div>
           <div class="col-md-4 mb-3">
             <ul class="list-unstyled footer-links">
-              <li>Lifespan Estimates</li>
-              <li>Car Analytics Checker</li>
-              <li>Tax Check</li>
-              <li>Insurance Checker</li>
-              <li>Fuel Economy Check</li>
-              <li>CO₂ Emissions Check</li>
-              <li>Mileage Check</li>
-              <li>Stolen Vehicle Check</li>
-              <li>Car Valuation</li>
-              <li>Other</li>
+                <li><a href="#" class="text-decoration-none">Lifespan Estimates</a></li>
+                <li><a href="#" class="text-decoration-none">Car Analytics Checker</a></li>
+                <li><a href="#" class="text-decoration-none">Tax Check</a></li>
+                <li><a href="#" class="text-decoration-none">Insurance Checker</a></li>
+                <li><a href="#" class="text-decoration-none">Fuel Economy Check</a></li>
+                <li><a href="#" class="text-decoration-none">CO₂ Emissions Check</a></li>
+                <li><a href="#" class="text-decoration-none">Mileage Check</a></li>
+                <li><a href="#" class="text-decoration-none">Stolen Vehicle Check</a></li>
+                <li><a href="#" class="text-decoration-none">Car Valuation</a></li>
+                <li><a href="#" class="text-decoration-none">Other</a></li>
             </ul>
           </div>
           <div class="col-md-4 mb-3">
-            <ul class="list-unstyled footer-links">
-              <li>Join Our Affiliate Program</li>
-              <li>AI Mechanic</li>
-              <li>Check MOT and Tax</li>
-              <li>Write-Off Check</li>
-              <li>ULEZ Check</li>
-              <li>Insurance Group</li>
-              <li>Insurance Group Check</li>
-              <li>Recall Check</li>
-              <li>FAQs</li>
-              <li>Advice</li>
+            <ul class="list-unstyled footer-links text-decoration-none">
+              <li><a href="#" class="text-decoration-none">Join Our Affiliate Program</a></li>
+              <li><a href="#" class="text-decoration-none">AI Mechanic</a></li>
+              <li><a href="#" class="text-decoration-none">Check MOT and Tax</a></li>
+              <li><a href="#" class="text-decoration-none">Write-Off Check</a></li>
+              <li><a href="#" class="text-decoration-none">ULEZ Check</a></li>
+              <li><a href="#" class="text-decoration-none">Insurance Group</a></li>
+              <li><a href="#" class="text-decoration-none">Insurance Group Check</a></li>
+              <li><a href="#" class="text-decoration-none">Recall Check</a></li>
+              <li><a href="#" class="text-decoration-none">FAQs</a></li>
+              <li><a href="#" class="text-decoration-none">Advice</a></li>
             </ul>
           </div>
         </div>
@@ -488,7 +503,7 @@ An HPI check uncovers important details like outstanding finance or write-off re
     <div class="row mt-4 align-items-center">
       <!-- Bottom Left: Social Icons -->
       <div class="col-md-6">
-        <p class="fw-bold mb-3" style="font-weight: 800; font-size: 20px; line-height: 30px;">Follow us</p>
+        <p class="fw-bold mb-3 text-white" style="font-weight: 800; font-size: 20px; line-height: 30px;">Follow us</p>
      <div class="d-flex justify-content-start align-items-center gap-3">
       <a href="#" class="fs-4"><i class="fab fa-instagram"></i></a>
       <a href="#" class="fs-4"><i class="fab fa-tiktok"></i></a>
@@ -508,9 +523,6 @@ An HPI check uncovers important details like outstanding finance or write-off re
   </div>
 </footer>
 <!-- Footer End -->
-
-
-
 
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
@@ -561,6 +573,18 @@ An HPI check uncovers important details like outstanding finance or write-off re
     errorMessage.classList.remove('active');
     resultMessage.classList.remove('active', 'success');
     resultMessage.textContent = '';
+  });
+</script>
+
+<script>
+  const themeSwitch = document.getElementById('themeSwitch');
+  const body = document.body;
+
+  // Default dark
+  body.classList.add('dark-mode');
+
+  themeSwitch.addEventListener('change', () => {
+    body.classList.toggle('dark-mode');
   });
 </script>
 
